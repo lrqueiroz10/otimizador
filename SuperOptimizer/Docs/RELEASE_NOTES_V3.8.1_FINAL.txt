@@ -1,0 +1,27 @@
+SUPER OPTIMIZER V3.8.1 FINAL — RELEASE NOTES
+
+DESTAQUE
+Perfil GAMER + NAVEGADOR com preservação personalizável de recursos usados no PC, mantendo rollback e base limpa entre reaplicações.
+
+OPÇÕES PERSONALIZÁVEIS
+- Impressora / Print Spooler
+- Windows Search / indexação
+- OneDrive / sincronização
+- Área de Trabalho Remota (RDP)
+- VPN / roteamento
+- Hotspot / compartilhamento
+- Windows Hello / biometria
+- Descoberta de rede / UPnP
+- Hibernação
+- Virtualização: VirtualBox / WSL2 / Docker / Hyper-V / Sandbox
+
+GARANTIAS DE PROJETO
+- Backup/State antes de mudanças reversíveis críticas.
+- MachineGuid para associação do State à máquina.
+- Defender não é desativado por completo.
+- Windows Update, Store/Xbox, Bluetooth, câmera/microfone e recursos essenciais não entram silenciosamente em presets destrutivos.
+- Recent/Acesso Rápido, Prefetch e Event Logs não são tratados como lixo.
+- Atualizador automático continua deliberadamente fora desta versão.
+
+MIGRAÇÃO
+Preserve a pasta State ao substituir uma versão anterior.

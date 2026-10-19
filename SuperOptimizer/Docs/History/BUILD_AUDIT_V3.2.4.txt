@@ -1,0 +1,31 @@
+﻿SUPER OPTIMIZER V3.2.4 - MEMORY TOOLS AUDIT
+=============================================
+
+Config.json: OK
+XAML XML: OK
+UI -> Engine: OK
+Rotas Engine: 51
+Ações UI: 47
+
+RAM:
+- RamStandbyClean: OK
+- RamFullClean: OK
+- Ferramenta externa não embutida: OK
+- Caminho esperado Tools\EmptyStandbyList.exe: OK
+- SHA-256/assinatura registrados antes da execução: OK
+- Standby com limiar de 25% de RAM livre: OK
+- Full clean exige Force/confirmacão: OK
+- Não faz parte da Manutenção Semanal: OK
+- Não faz parte dos perfis: OK
+
+Correções anteriores preservadas:
+- Dashboard .Count: OK
+- WPF sem GetNewClosure: OK
+- Perfis resilientes: OK
+- Recent/Acesso Rápido preservado: OK
+- Prefetch preservado: OK
+- Event Logs não são limpos: OK
+
+LIMITAÇÃO:
+Este ambiente não executa EmptyStandbyList.exe nem WPF/Registro/serviços do Windows.
+As novas rotas passam em DRY-RUN no Auto-Teste do próprio Windows.

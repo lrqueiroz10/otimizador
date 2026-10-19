@@ -1,0 +1,35 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12 — RECUPERAÇÃO
+================================================================
+
+ORIGEM
+- Reconstruída sobre a base física V3.7.0 OPTIMIZATION LAB RC10.
+- Alterações RC11/RC12 foram reconstituídas a partir do histórico preservado do projeto.
+- Não é alegado que este pacote seja byte a byte idêntico ao RC12 perdido.
+
+OTIMIZAR WINDOWS / OPTIMIZATION LAB
+- Corrigida a regressão visual de CheckBoxes sem rótulos no Windows PowerShell 5.1.
+- O texto da opção agora pertence ao próprio CheckBox ($cb.Content).
+- Risco MÉDIO/EXPERIMENTAL aparece no rótulo; risco completo também aparece no ToolTip.
+- ToolTip mostra descrição, alvo e risco.
+- Removida a composição frágil com CheckBox vazio + StackPanel de texto separado.
+- Mantidos os 32 módulos, presets, prévia, aplicação selecionada e três caminhos de rollback.
+
+AUDITORIA DE UI
+- Dashboard continua concentrando Smart Care e ações principais.
+- Limpeza continua separada de Manutenção.
+- Serviços continuam em tela própria.
+- VBS/HVCI/Hypervisor permanecem isolados em Virtualização.
+- Corrigido texto obsoleto em GPU / Windows Update que citava um Latency Lab próprio; DNS fica em DNS / Rede e o benchmark recomendado permanece o DNS Jumper.
+
+VERSÃO / QA
+- Identificação sincronizada para 3.7.2 UI AUDIT RC12 em Config, XAML, Launcher, BAT e Auto-Teste.
+- Auto-Teste ganhou guarda de regressão "Optimization Lab rótulos visíveis".
+- Integrity.json regenerado após as alterações.
+
+SEGURANÇA PRESERVADA
+- Recent/Acesso Rápido, Prefetch e Event Logs continuam fora das limpezas automáticas.
+- Sem /ResetBase.
+- Sem HPET/useplatformclock/disabledynamictick.
+- Defender não é desligado.
+- Experimentais continuam fora dos presets recomendados.
+- VirtualBox/AMD-V, Xbox/Game Pass/Store, Bluetooth, câmera, microfone, Phone Link e Windows Update permanecem recursos a preservar.

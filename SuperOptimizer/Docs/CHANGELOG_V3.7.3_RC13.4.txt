@@ -1,0 +1,8 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.5 — MULTI-SELECTION FIX
+
+- Corrige presets do Optimization Lab para serem cumulativos.
+- Antes, clicar em Gaming e depois Interface desmarcava Gaming porque o segundo preset reescrevia todas as caixas.
+- Agora cada preset somente marca os módulos correspondentes e preserva tudo que já estava selecionado.
+- Limpar seleção continua sendo a única ação explícita para zerar a seleção.
+- Todos não-experimentais e Selecionar última sessão continuam com semântica de seleção completa.
+- Engine.psm1 e Worker.ps1 não foram alterados.

@@ -1,0 +1,12 @@
+﻿SUPER OPTIMIZER V3.8.0 FINAL R1
+
+REVISÃO DE RELEASE
+- Corrige falso negativo no teste "Histórico com tema escuro e virtualização".
+- A falha era do SelfTest: uma string em aspas duplas expandia $grid e $Window antes da busca no App.ps1.
+- A implementação do Histórico já possuía DarkDataGridHeaderStyle, DarkDataGridCellStyle, DarkDataGridRowStyle, EnableRowVirtualization e EnableColumnVirtualization.
+- O teste agora usa literais PowerShell sem expansão e valida os três estilos + virtualização.
+- Nenhuma rota, tweak, rollback, perfil, limpeza, Worker ou Engine foi alterado nesta R1.
+
+BASE VALIDADA
+- V3.8.0 FINAL: 159/160 no Windows PowerShell 5.1 real; único ERRO era este falso negativo.
+- Expectativa para R1 no mesmo ambiente: 160/160.

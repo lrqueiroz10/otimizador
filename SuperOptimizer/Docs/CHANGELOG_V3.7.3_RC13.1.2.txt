@@ -1,0 +1,6 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.1.2 — TEXT CONSISTENCY HOTFIX
+
+- Ajuste visual solicitado: "LIMPEZA FINAL" passa a "Limpeza Final".
+- "LIMPEZA FINAL / PROFUNDA" passa a "Limpeza Final / Profunda".
+- Auto-Teste atualizado para a nova grafia.
+- Nenhuma lógica do Engine ou Worker foi alterada.

@@ -1,0 +1,42 @@
+﻿SUPER OPTIMIZER V3.2.2 POLISHED
+=======================================
+
+ERROS REPORTADOS CORRIGIDOS
+- Dashboard: corrigido erro ".Count não foi encontrada" no cálculo do perfil.
+- Operações: removido GetNewClosure de App.ps1 inteiro.
+- Corrigido popup "Start-StatusRefresh não é reconhecido".
+- Eventos WPF usam sender.Tag/DispatcherTimer.Tag para manter contexto.
+- Launcher bloqueia a GUI caso GetNewClosure reapareça.
+- Auto-Teste verifica a mesma regra.
+
+OBSERVAÇÃO SOBRE V3.1
+O erro Start-StatusRefresh acontecia depois que o Worker terminava, durante a
+atualização visual. Portanto uma ação clicada na V3.1 PODE ter sido aplicada
+antes do popup. Confira o Dashboard/Status antes de reaplicar perfis.
+
+GAMING
+- Aba nova "Jogos priorizados".
+- Mostra executável, prioridade e origem.
+- SUPER OPTIMIZER = backup gerenciado; permite restaurar individualmente.
+- DETECTADO = configuração externa; não é removida automaticamente.
+- Atualizar lista / Restaurar selecionado.
+- Restaurar todos os jogos continua disponível.
+
+MANUTENÇÃO EXPANDIDA
+- Manutenção Semanal Segura
+- TEMP do usuário
+- Windows Temp
+- Flush DNS
+- Esvaziar Lixeira (separado)
+- Cache DirectX Shader (opcional)
+- Verificar Integridade
+- REPARAR Windows
+- CHKDSK /scan
+- Analisar WinSxS
+- Limpar WinSxS sem /ResetBase
+- Cache Windows Update preservando estado anterior dos serviços
+- Atalhos Armazenamento e Windows Update
+- Leitura de RAM
+
+A rotina semanal preserva Acesso Rápido/Recent, Prefetch, Event Logs,
+Shader Cache e Lixeira.

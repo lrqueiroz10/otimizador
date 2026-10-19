@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Super Optimizer V3.9.0 DEV</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;background:#090e1c;color:#eef4ff;max-width:980px;margin:40px auto;padding:0 24px;line-height:1.55}
+h1,h2{color:#22d3ee}.card{background:#16233e;border:1px solid #243b63;border-radius:12px;padding:18px;margin:16px 0}
+.warn{color:#f9c74f}.ok{color:#86efac}code{background:#111b31;padding:3px 7px;border-radius:6px}
+</style>
+</head>
+<body>
+<h1>SUPER OPTIMIZER V3.9.0 DEV</h1>
+<div class="card"><h2>Versão de desenvolvimento</h2><p class="warn">A base FINAL foi preservada. Esta evolução inclui comparador em tabela com busca e CSV, correções de resultados antigos e critérios rigorosos no Auto-Teste. Aguarda validação funcional no Windows 11/PowerShell 5.1.</p></div>
+<p>Aplicativo PowerShell 5.1 + WPF para Windows 11, focado em gaming, manutenção, reversibilidade e transparência.</p>
+<div class="card"><h2>Perfis</h2>
+<p><b>Universal:</b> núcleo conservador. <b>Agressivo:</b> gaming + redução de background/serviços. <b>Extremo:</b> acrescenta VBS/HVCI/Hypervisor OFF quando aplicável.</p>
+<p><b>Gamer + Navegador:</b> perfil personalizável para quem joga e usa o PC no dia a dia. Permite preservar individualmente Impressora/Print Spooler, Windows Search, OneDrive, RDP, VPN, Hotspot, Windows Hello/biometria, descoberta de rede/UPnP, hibernação e virtualização (VirtualBox/WSL2/Docker/Hyper-V/Sandbox).</p>
+<p>O perfil Gamer + Navegador restaura primeiro as camadas salvas e só então aplica a nova combinação, evitando acúmulo silencioso de estados anteriores.</p></div>
+<div class="card"><h2>State Intelligence</h2>
+<p>Comparador Antes x Depois, histórico persistente, perfis personalizados do Optimization Lab, export/import JSON, estado visual por módulo, comparação entre perfis, State Manager, diagnóstico TXT/JSON e confirmação pós-reboot.</p></div>
+<div class="card"><h2>Segurança e rollback</h2>
+<p>Backups originais são associados à máquina por MachineGuid. Registro, serviços, tarefas, energia, Defender, hibernação e virtualização usam State/rollback quando a operação exige reversibilidade.</p>
+<p>O programa não inclui tweaks de alto risco/baixo valor como <code>useplatformclock</code>, <code>disabledynamictick</code>, <code>/ResetBase</code> ou desativação total do Defender.</p></div>
+<div class="card"><h2>Limpeza e manutenção</h2>
+<p>Manutenção Semanal, Limpeza Completa e Limpeza Final preservam Downloads, Recent/Acesso Rápido, Prefetch e Event Logs. Arquivos em uso são ignorados com segurança e resumidos no log.</p></div>
+<div class="card"><h2>Histórico de validação da base V3.8.1</h2>
+<p class="ok">A lógica promovida para FINAL é a mesma da RC15.3 validada em Windows PowerShell 5.1 real nos dois cenários críticos do novo perfil: recursos desmarcados (Spooler e virtualização reduzidos) e, em seguida, recursos marcados novamente (estado original restaurado e preservado). Ambos terminaram com verificação <b>GAMER + NAVEGADOR</b>.</p>
+<p>O aviso opcional de <code>AllowNewsAndInterests</code> permanece não fatal quando o Windows recusa a política.</p></div>
+<p class="warn"><b>Importante:</b> ao migrar de versão, preserve sua pasta <code>State</code> para manter backups, ORIGINAL, histórico e rollback já capturados.</p>
+</body></html>

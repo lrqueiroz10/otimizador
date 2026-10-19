@@ -1,0 +1,11 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.6 — BUILD AUDIT
+
+- Base: RC12.5
+- Hotfix: fallback para o caminho visual já comprovado (ActionCard + WrapPanel + New-Button)
+- Engine.psm1: preservado
+- Worker.ps1: preservado
+- Config JSON: validado
+- MainWindow XAML: validado
+- Integrity.json: regenerado após as alterações
+- Auto-Teste: mesma contagem; validação de paleta ampliada para exigir o fallback nas áreas afetadas
+- Escopo: UI apenas

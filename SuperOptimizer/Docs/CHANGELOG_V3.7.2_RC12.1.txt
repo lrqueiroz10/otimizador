@@ -1,0 +1,21 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.1 — HOTFIX VISUAL + AUTO-TESTE
+
+1. OPTIMIZATION LAB
+- Mantém o texto como conteúdo do próprio CheckBox para evitar a regressão visual do PowerShell 5.1.
+- O nome da otimização permanece branco.
+- [MÉDIO] volta a ser destacado em amarelo.
+- [EXPERIMENTAL] volta a ser destacado em vermelho.
+- EXPERIMENTAL continua fora dos presets automáticos.
+
+2. WINDOWS STUDIO — MODO TUDO
+- A rota legada ApplyAll agora usa explicitamente apenas módulos não-experimentais.
+- Memory Compression OFF, HAGS ON, MPO OFF e SysMain OFF não entram silenciosamente nessa rota.
+
+3. AUTO-TESTE
+- Corrigida a validação de rótulos que gerava falso negativo por interpolação de variável.
+- Snapshot escopado atualizado para a geração V4, substituindo a checagem antiga Version=3.
+- Validação de Windows Studio curado agora verifica a rota não-experimental real.
+
+4. INTEGRIDADE
+- Versionamento operacional sincronizado para 3.7.2 UI AUDIT RC12.1.
+- Integrity.json regenerado após todas as alterações.

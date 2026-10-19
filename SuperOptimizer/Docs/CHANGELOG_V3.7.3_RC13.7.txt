@@ -1,0 +1,11 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.7 — EXTREME PROFILE / REGISTRY / POWERCFG HOTFIX
+
+- Corrige falha fatal do Perfil Extremo em powercfg /setacvalueindex no Windows real.
+- Invoke-SOPowerCfg passa a tratar stderr nativo por ExitCode, mesmo com ErrorActionPreference=Stop.
+- Plano Gaming usa GUIDs oficiais para CPU máximo, USB selective suspend e PCIe ASPM.
+- Falha opcional de um ajuste de energia não aborta todo o perfil.
+- Set-SORegistryValue não executa mais New-Item -Force sobre chave existente; corrige TaskbarAnimations, ToastEnabled e políticas que retornavam UnauthorizedAccessException/erros do Registry Provider.
+- Restore-SORegistry recebe a mesma correção para o rollback geral.
+- Escrita do arquivo de progresso usa FileShare.ReadWrite + retries e deixa de gerar aviso falso durante leitura simultânea pela UI.
+- Tema Claro/Escuro continua fora do escopo do Engine; VisualFXSetting=2 permanece removido.
+- Todas as chamadas críticas restantes de powercfg (hibernação, leitura/duplicação de plano e Undo de sessão) foram centralizadas no executor robusto.

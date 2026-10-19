@@ -1,0 +1,41 @@
+﻿SUPER OPTIMIZER V3.1 STABLE WPF - BUILD AUDIT
+================================================
+Data do build: 2026-09-15T08:53:17
+
+ESTRUTURA
+- Raiz limpa: SuperOptimizer.bat + pasta SuperOptimizer
+- Scripts PowerShell/Modules: 5
+- XAML separado: UI\MainWindow.xaml
+- Serviços curados no Config: 37
+
+VALIDACOES ESTATICAS EXECUTADAS
+- Config.json parseado: OK
+- MainWindow.xaml parseado como XML: OK
+- Balanceamento de (), [] e {} nos scripts: OK
+- Strings/comentarios basicos balanceados: OK
+- Busca por interpolacoes suspeitas $variavel:: 0
+- Referencias FindName vs x:Name: OK
+- Ações usadas pela interface vs roteador do Engine: 38 verificadas, 0 ausentes
+- Acesso Rápido/Recent não e removido pela manutenção: OK
+- Sem limpeza de Prefetch/Event Logs: OK
+- Sem EmptyStandbyList automatico: OK
+- Sem HPET/useplatformclock/disabledynamictick: OK
+
+CORRECOES ESTRUTURAIS
+- WinForms com coordenadas absolutas removido.
+- Nova interface WPF com Grid/WrapPanel responsivo.
+- Conteudo e sidebar em colunas independentes.
+- Status em worker com timeout de 20 segundos.
+- Dashboard apenas atualiza campos; não se reconstrói a cada status.
+- Operacoes pesadas rodam em worker separado.
+- Modos de serviço Manual não são mais parados a força.
+- Backup de serviços tolera DelayedAutoStart ausente.
+- Rollback Background restaura DiagTrack/WerSvc quando aplicavel.
+- Launcher valida PowerShell, JSON, XAML/WPF e faz smoke-test dry-run antes da GUI.
+- Auto-teste local percorre as rotas principais em dry-run.
+
+LIMITACAO
+Este ambiente de build não executa Windows/PowerShell 5.1 real. Por isso o pacote
+tambem se auto-valida no PC do usuário: o Launcher usa o parser oficial do
+PowerShell e carrega o XAML WPF antes de abrir a interface; o Auto-teste roda
+as rotas em dry-run localmente.

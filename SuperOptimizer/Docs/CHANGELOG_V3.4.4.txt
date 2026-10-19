@@ -1,0 +1,26 @@
+﻿SUPER OPTIMIZER V3.4.4 FULL CLEAN RC4
+=====================================
+
+CORREÇÕES DO AUTO-TESTE 86/89
+- API nativa de RAM: Test-SORamNativeApiAvailable agora é exportada para o SelfTest.
+- Status: leitura do histórico de manutenção agora é segura sob StrictMode mesmo quando HealthScan/WeeklySafe ainda não existem.
+- Isso corrige tanto Dry-run de rotas quanto Worker IPC: Status em instalações com histórico parcial.
+
+NOVO: LIMPEZA COMPLETA SEGURA DO PC
+- TEMP do usuário
+- Windows Temp
+- DirectX Shader Cache
+- Windows Update Download Cache
+- Lixeira
+- DNS
+- estima espaço livre antes/depois quando disponível
+
+PRESERVADO POR SEGURANÇA
+- Downloads
+- Recent/Acesso Rápido
+- Prefetch
+- Event Logs
+- WinSxS
+- caches de navegador
+
+A limpeza completa é manual, pede confirmação e não entra em perfis automáticos.

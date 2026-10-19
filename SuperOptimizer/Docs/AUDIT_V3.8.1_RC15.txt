@@ -1,0 +1,15 @@
+﻿AUDITORIA V3.8.1 RC15 — PERFIL GAMER + NAVEGADOR
+
+Objetivo: adicionar um perfil intermediário/personalizável sem alterar a filosofia fail-safe do Super Optimizer.
+
+Controles de risco:
+- Ponto de restauração marcado por padrão.
+- Estado original restaurado antes da aplicação personalizada.
+- Impressora/Spooler não entra na lista de serviços-alvo.
+- Recursos essenciais continuam preservados.
+- VBS/HVCI/Hypervisor só são desligados quando o usuário desmarca explicitamente a preservação de virtualização.
+- AMD-V/SVM da BIOS nunca é alterado.
+- OneDrive só recebe DisableFileSyncNGSC quando o usuário escolhe não preservá-lo.
+- Serviços opcionais são filtrados por lista de exclusão, mantendo o mesmo sistema de backup/rollback já existente.
+
+Esta build é FINAL CANDIDATE porque a nova rota precisa do Auto-Teste e de smoke test no Windows PowerShell 5.1 real antes de promoção.

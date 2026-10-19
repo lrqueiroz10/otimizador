@@ -1,0 +1,23 @@
+﻿SUPER OPTIMIZER V3.5.0 WINDOWS STUDIO + DNS LAB RC6
+
+BASE
+- Reconstruído sobre V3.4.4 FULL CLEAN RC4, que passou 91/91 no Windows do usuário.
+- V3.4.5 não foi usada como base após relato de falha ao iniciar.
+
+WINDOWS STUDIO
+- Módulos individuais: Energia Gaming, Power Throttling, Visuais, Background, Telemetria, Indexação e Hibernação.
+- OTIMIZAR WINDOWS (TUDO) com snapshot obrigatório de sessão.
+- DESFAZER ÚLTIMA SESSÃO restaura o estado imediatamente anterior ao modo Tudo.
+- Restaurar originais do Studio usa os backups originais do Super Optimizer.
+- Não inclui VBS/HVCI, Xbox, Prefetch/SysMain, Memory Compression, debloat, DNS ou drivers no modo Tudo.
+
+DNS LATENCY LAB
+- Benchmark nativo por UDP, sem DNSJumper.exe obrigatório.
+- Provedores: Cloudflare, Google Public DNS, Quad9 e AdGuard Unfiltered.
+- Aplica melhor provedor confiável, permite escolha manual e restaura DNS original.
+- Não usa ipconfig /release ou /renew como falso tweak de latência.
+
+INTERFACE
+- Central de Limpeza reconstruída a partir da base estável.
+- Atalhos no Dashboard para Windows Studio e DNS Lab.
+- Script DIAGNOSTICO_INICIALIZACAO.bat adicionado à raiz.

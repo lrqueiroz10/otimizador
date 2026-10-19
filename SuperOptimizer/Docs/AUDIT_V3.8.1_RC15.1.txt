@@ -1,0 +1,14 @@
+﻿AUDITORIA V3.8.1 RC15.1 — IMPRESSÃO PERSONALIZÁVEL
+
+ANTES
+- Impressora/Spooler era declarada como sempre preservada.
+- Spooler não estava no catálogo geral de serviços e não podia ser desativado pelo perfil.
+
+DEPOIS
+- Spooler continua fora do catálogo geral de serviços, evitando alteração por Universal/Agressivo/Extremo.
+- Gamer + Navegador possui opção PreservePrinter (padrão TRUE).
+- Se FALSE, Set-SOServiceMode cria/valida backup original antes de desativar o Spooler.
+- RestoreAll e a restauração de serviços existentes recuperam o StartupType/estado salvo via SCM.
+- O detector GAMER + NAVEGADOR exige Spooler=Disabled quando a configuração salva indica PreservePrinter=FALSE.
+- Interface possui aviso de impacto e confirmação de risco.
+- Config não declara mais Impressora como preservação incondicional.

@@ -1,0 +1,14 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.4 — BUTTON RENDERING HOTFIX
+
+Escopo desta rodada: somente corrigir botões que apareciam como texto solto em grades como DNS / Rede, WinGet e Atalhos do Windows.
+
+Alterações:
+- New-Button agora aplica Background local #111B31, diferente do card #16233E.
+- BorderThickness local reforçado para 1.5 e BorderBrush continua seguindo o Accent de cada ação.
+- Texto do botão virou TextBlock WPF explícito, centralizado e em SemiBold.
+- ActionButtonStyle também usa fundo #111B31 e borda 1.5 como fallback visual.
+- Auto-Teste "Paleta de botões" foi endurecido para impedir regressão para botões sem caixa visível.
+- Nenhuma alteração em Engine.psm1, Worker.ps1, rotas, tweaks, snapshots ou rollback.
+
+Objetivo visual:
+[ botão com caixa claramente visível ] em vez de texto flutuando dentro do card.

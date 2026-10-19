@@ -1,0 +1,6 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.6 — BUILD AUDIT
+
+- Tema Claro/Escuro não é alvo de nenhuma otimização.
+- Visuals reduzido a duas alterações específicas e reversíveis.
+- Integrity.json regenerado após alterações.
+- Versionamento operacional sincronizado.

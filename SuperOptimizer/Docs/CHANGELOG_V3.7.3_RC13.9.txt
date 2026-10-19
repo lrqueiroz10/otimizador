@@ -1,0 +1,8 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.9 — PERFIL ORIGINAL VISÍVEL
+
+- Tela Perfis agora expõe ORIGINAL / ANTES DO SUPER OPTIMIZER.
+- O botão reutiliza a rota RestoreAll existente; não cria uma segunda lógica de rollback.
+- Card explica a hierarquia ORIGINAL → UNIVERSAL → AGRESSIVO → EXTREMO.
+- Incluídos atalhos Auditar State e Abrir pasta State.
+- Auto-Teste ganhou proteção Perfil ORIGINAL acessível.
+- Engine/Worker mantidos sem alterações nesta rodada de UI.

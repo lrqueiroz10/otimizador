@@ -1,0 +1,32 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13 — AUDITORIA CONSOLIDADA
+
+ESCOPO
+- Auditoria visual/estrutural tela por tela.
+- Congelamento de funcionalidades: nenhuma nova categoria de tweak.
+- Padronização de cards de ação em GridActionCard.
+- Remoção dos helpers temporários Reliable/Matrix das RC12.4/12.5.
+- CheckBoxes auxiliares (Perfis, WinGet, ponto de restauração do Lab) usam CheckBox + TextBlock irmãos.
+- Smart Care deixou de usar ScrollViewer aninhado.
+- Optimization Lab auditado: 32 módulos no catálogo, 32 na UI, 32 com aplicação e 32 com rollback seletivo.
+- Engine.psm1 e Worker.ps1 permanecem byte por byte idênticos à RC12.2 que obteve 126/126 no Windows real; esta rodada altera UI, SelfTest, documentação e versionamento.
+
+TELAS
+Dashboard: KPIs 2x2; Smart Care direto; ações principais 3 colunas; WinGet 2 colunas; atalhos 3 colunas.
+Perfis: cards alinhados, botão na base e rótulo do ponto de restauração fora do Content do CheckBox.
+Limpeza: armazenamento 2 colunas; plano/individuais/RAM em 3 colunas.
+Manutenção: diagnóstico 3 colunas; reparo 2; Update/armazenamento 2.
+Gaming: ações em 3 colunas; prioridade por jogo e lista em 2 colunas.
+Otimizar Windows: opções compactas; risco MÉDIO amarelo; EXPERIMENTAL vermelho; presets/aplicar/rollback em grades.
+DNS: DNS Jumper 3 colunas; ferramentas nativas 2x2.
+Serviços: tabela + ações em 2 colunas.
+GPU/Update: grade de 3 colunas.
+Virtualização: 2 ações alinhadas.
+Rollback: grade de 3 colunas.
+Diagnóstico: testes 2 colunas; relatórios 3 colunas.
+
+PENDÊNCIAS QUE EXIGEM WINDOWS REAL
+1. Auto-Teste completo desta build.
+2. Aplicar Game Mode + Efeitos Visuais e confirmar estado.
+3. DESFAZER ÚLTIMA APLICAÇÃO e confirmar retorno.
+4. Reiniciar o Windows e repetir Diagnóstico/State Audit.
+5. Somente depois congelar como FINAL.

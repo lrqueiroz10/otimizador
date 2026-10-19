@@ -1,0 +1,33 @@
+﻿AUDITORIA ESTÁTICA RC15.1 — PERFIL GAMER + NAVEGADOR
+
+Resultado: 27/27 verificações aprovadas
+
+[OK] Config JSON válido
+[OK] Spooler fora do catálogo geral
+[OK] Impressora não é preservação incondicional
+[OK] Checkbox de impressora presente
+[OK] Impressora marcada por padrão
+[OK] Dado PreservePrinter enviado pela UI
+[OK] Engine recebe PreservePrinter
+[OK] Engine desativa Spooler só sob opção
+[OK] Backup/rollback usado via Set-SOServiceMode
+[OK] Detector verifica Spooler quando desmarcado
+[OK] Marker persiste PreservePrinter
+[OK] Aviso de Print to PDF
+[OK] SelfTest atualizado
+[OK] Config versão exata
+[OK] SelfTest versão exata
+[OK] Launcher versão exata
+[OK] XAML versão exata
+[OK] BAT versão exata
+[OK] Integrity 7/7
+[OK] MainWindow.xaml válido
+[OK] Fragmentos XAML válidos
+[OK] Bloqueio /ResetBase
+[OK] Bloqueio DisableAntiSpyware
+[OK] Bloqueio useplatformclock
+[OK] Bloqueio disabledynamictick
+[OK] Funções Engine sem duplicidade
+[OK] Funções App sem duplicidade
+
+Nota: parser oficial PowerShell/WPF deve ser confirmado pelo Auto-Teste no Windows PowerShell 5.1 real.

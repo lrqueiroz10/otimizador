@@ -1,0 +1,8 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.6 — THEME SAFETY HOTFIX
+
+- Efeitos visuais deixa de usar VisualFXSetting=2 (modo amplo de melhor desempenho).
+- O módulo Visuals agora altera somente MinAnimate=0 e TaskbarAnimations=0.
+- O Super Optimizer não escreve AppsUseLightTheme/SystemUsesLightTheme.
+- Descrição do Optimization Lab atualizada para deixar explícito que o tema Claro/Escuro é preservado.
+- Auto-Teste ganhou proteção contra regressão de tema.
+- Demais rotas, rollback e módulos preservados.

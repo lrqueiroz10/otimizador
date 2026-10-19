@@ -1,0 +1,27 @@
+﻿SUPER OPTIMIZER V3.1 STABLE WPF
+================================
+
+INTERFACE
+- WinForms manual substituído por WPF responsivo.
+- Sidebar e conteúdo em colunas reais: nada fica escondido atrás do menu.
+- Cards de perfis usam Grid proporcional.
+- Botões usam WrapPanel e quebram linha conforme a largura.
+- Melhor suporte a DPI/escala do Windows.
+- Dashboard não é reconstruído quando o status termina; apenas os campos são atualizados.
+- Status tem timeout de 20 segundos para evitar ficar travado.
+- Erros de eventos são capturados em State\Logs\ui_last_error.txt.
+
+MOTOR
+- Worker continua separado da interface.
+- Operações pesadas continuam em segundo processo.
+- Serviços definidos como Manual não são mais parados à força.
+- Backup de serviço não falha se DelayedAutoStart não existir.
+- Restaurar Background também restaura DiagTrack/WerSvc quando foram alterados.
+- Plano de energia é recriado se o plano gaming salvo tiver sido removido.
+- Detecção de perfil foi reescrita sem expressões ambíguas.
+- Leitura CIM de status usa timeout.
+
+PRE-FLIGHT / TESTE
+- Launcher valida .ps1, .psm1, Config.json e MainWindow.xaml.
+- Auto-teste valida XAML e executa as rotas principais em dry-run.
+- Nenhuma tentativa de limpar Recent/Acesso Rápido, Prefetch ou Event Logs.

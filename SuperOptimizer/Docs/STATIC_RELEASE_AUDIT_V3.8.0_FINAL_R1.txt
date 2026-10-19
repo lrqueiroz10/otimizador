@@ -1,0 +1,24 @@
+﻿SUPER OPTIMIZER V3.8.0 FINAL R1 — STATIC RELEASE AUDIT
+
+[OK] Engine byte-identical to FINAL
+[OK] Worker byte-identical to FINAL
+[OK] App byte-identical to FINAL
+[OK] History header style present
+[OK] History cell style present
+[OK] History row style present
+[OK] Row virtualization present
+[OK] Column virtualization present
+[OK] Fixed test uses non-expanding literal
+[OK] Config version
+[OK] XAML version
+[OK] Launcher version
+[OK] BAT version
+[OK] SelfTest version
+[OK] MainWindow XML
+[OK] Integrity 7/7
+[OK] Forbidden absent: /ResetBase
+[OK] Forbidden absent: DisableAntiSpyware
+[OK] Forbidden absent: useplatformclock
+[OK] Forbidden absent: disabledynamictick
+
+RESULT: 20/20

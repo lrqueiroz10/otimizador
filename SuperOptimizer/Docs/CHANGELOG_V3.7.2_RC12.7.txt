@@ -1,0 +1,7 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.7 — EMPTY CARD HOTFIX
+
+- Substitui os cards que ainda apareciam vazios por grids explícitos com botões locais.
+- Dashboard: Atualizações de aplicativos e Atalhos do Windows usam GridActionCard.
+- DNS / Rede: Ferramentas nativas / recuperação usa GridActionCard 2x2.
+- Optimization Lab: Aplicar / inspecionar e Desfazer / restaurar usam GridActionCard; checkbox agora é linha explícita (CheckBox + TextBlock).
+- Engine e Worker preservados sem alterações.

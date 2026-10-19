@@ -1,0 +1,21 @@
+﻿SUPER OPTIMIZER V3.7.0 OPTIMIZATION LAB RC10
+================================================================
+
+OPTIMIZATION LAB
+- Windows Studio expandido de 7 para 32 módulos granulares visíveis.
+- Presets: Recomendados, Gaming, Performance, Privacidade, Interface, Serviços e todos não-experimentais.
+- EXPERIMENTAIS nunca entram automaticamente nos presets recomendados.
+- Snapshot V4 escopado captura somente o que a seleção pode alterar.
+- Desfazer última aplicação restaura estado imediatamente anterior.
+- Restaurar selecionados usa backups originais conhecidos.
+- Defender nunca é desligado; módulo opcional apenas limita ScanAvgCPULoadFactor a 20.
+- Prefetch continua intocado. VBS/Hypervisor continuam isolados na aba Virtualização.
+
+INICIALIZAÇÃO
+- Splash visível informa que o programa está iniciando.
+- Engine/Worker IPC deixaram de rodar escondidos antes da interface; esses testes ficam no AUTO-TESTE.
+- startup_timing.log registra o tempo até a GUI.
+
+CORREÇÕES
+- DNSStatus: removido Generic.List incompatível com alguns cenários do Windows PowerShell 5.1.
+- Auto-Teste: corrigidas duas verificações textuais obsoletas (Perfis resilientes / Studio selecionável).

@@ -1,0 +1,7 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.5 — BUILD AUDIT
+
+- Multi-seleção de presets auditada e corrigida.
+- Novo teste estrutural: Optimization Lab presets cumulativos.
+- Versionamento operacional sincronizado.
+- Integrity.json regenerado após alteração.
+- Engine e Worker preservados.

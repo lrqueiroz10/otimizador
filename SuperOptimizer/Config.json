@@ -1,0 +1,270 @@
+﻿{
+  "version": "3.9.0 DEV",
+  "services": [
+    {
+      "name": "DiagTrack",
+      "mode": "Disabled",
+      "label": "Connected User Experiences / Telemetria",
+      "risk": "low"
+    },
+    {
+      "name": "WSearch",
+      "mode": "Disabled",
+      "label": "Windows Search / Indexação",
+      "risk": "medium"
+    },
+    {
+      "name": "WerSvc",
+      "mode": "Disabled",
+      "label": "Windows Error Reporting",
+      "risk": "low"
+    },
+    {
+      "name": "MapsBroker",
+      "mode": "Disabled",
+      "label": "Mapas offline",
+      "risk": "low"
+    },
+    {
+      "name": "Fax",
+      "mode": "Disabled",
+      "label": "Fax",
+      "risk": "low"
+    },
+    {
+      "name": "RemoteRegistry",
+      "mode": "Disabled",
+      "label": "Remote Registry",
+      "risk": "low"
+    },
+    {
+      "name": "RetailDemo",
+      "mode": "Disabled",
+      "label": "Retail Demo",
+      "risk": "low"
+    },
+    {
+      "name": "icssvc",
+      "mode": "Disabled",
+      "label": "Mobile Hotspot",
+      "risk": "medium"
+    },
+    {
+      "name": "SharedAccess",
+      "mode": "Disabled",
+      "label": "Internet Connection Sharing",
+      "risk": "medium"
+    },
+    {
+      "name": "lfsvc",
+      "mode": "Disabled",
+      "label": "Geolocalização",
+      "risk": "medium"
+    },
+    {
+      "name": "WbioSrvc",
+      "mode": "Disabled",
+      "label": "Biometria / Windows Hello biométrico",
+      "risk": "medium"
+    },
+    {
+      "name": "SCardSvr",
+      "mode": "Disabled",
+      "label": "Smart Card",
+      "risk": "medium"
+    },
+    {
+      "name": "ScDeviceEnum",
+      "mode": "Disabled",
+      "label": "Smart Card Device Enumeration",
+      "risk": "medium"
+    },
+    {
+      "name": "SCPolicySvc",
+      "mode": "Disabled",
+      "label": "Smart Card Removal Policy",
+      "risk": "medium"
+    },
+    {
+      "name": "TermService",
+      "mode": "Disabled",
+      "label": "Remote Desktop Services",
+      "risk": "medium"
+    },
+    {
+      "name": "SessionEnv",
+      "mode": "Disabled",
+      "label": "Remote Desktop Configuration",
+      "risk": "medium"
+    },
+    {
+      "name": "UmRdpService",
+      "mode": "Disabled",
+      "label": "RDP Port Redirector",
+      "risk": "medium"
+    },
+    {
+      "name": "WinRM",
+      "mode": "Disabled",
+      "label": "Windows Remote Management",
+      "risk": "medium"
+    },
+    {
+      "name": "Wecsvc",
+      "mode": "Disabled",
+      "label": "Windows Event Collector",
+      "risk": "low"
+    },
+    {
+      "name": "lmhosts",
+      "mode": "Disabled",
+      "label": "TCP/IP NetBIOS Helper",
+      "risk": "medium"
+    },
+    {
+      "name": "TrkWks",
+      "mode": "Disabled",
+      "label": "Distributed Link Tracking",
+      "risk": "low"
+    },
+    {
+      "name": "AJRouter",
+      "mode": "Disabled",
+      "label": "AllJoyn Router",
+      "risk": "low"
+    },
+    {
+      "name": "wisvc",
+      "mode": "Disabled",
+      "label": "Windows Insider",
+      "risk": "low"
+    },
+    {
+      "name": "WMPNetworkSvc",
+      "mode": "Disabled",
+      "label": "Media Player Network Sharing",
+      "risk": "low"
+    },
+    {
+      "name": "CscService",
+      "mode": "Disabled",
+      "label": "Offline Files",
+      "risk": "medium"
+    },
+    {
+      "name": "TabletInputService",
+      "mode": "Manual",
+      "label": "Touch Keyboard / Handwriting",
+      "risk": "medium"
+    },
+    {
+      "name": "SensorDataService",
+      "mode": "Manual",
+      "label": "Sensor Data",
+      "risk": "medium"
+    },
+    {
+      "name": "SensorService",
+      "mode": "Manual",
+      "label": "Sensor Service",
+      "risk": "medium"
+    },
+    {
+      "name": "SensrSvc",
+      "mode": "Manual",
+      "label": "Sensor Monitoring",
+      "risk": "medium"
+    },
+    {
+      "name": "RasAuto",
+      "mode": "Manual",
+      "label": "Remote Access Auto Connection",
+      "risk": "medium"
+    },
+    {
+      "name": "RasMan",
+      "mode": "Manual",
+      "label": "Remote Access Connection Manager / VPN",
+      "risk": "medium"
+    },
+    {
+      "name": "RemoteAccess",
+      "mode": "Manual",
+      "label": "Routing and Remote Access",
+      "risk": "medium"
+    },
+    {
+      "name": "FDResPub",
+      "mode": "Manual",
+      "label": "Function Discovery Publication",
+      "risk": "medium"
+    },
+    {
+      "name": "fdPHost",
+      "mode": "Manual",
+      "label": "Function Discovery Provider",
+      "risk": "medium"
+    },
+    {
+      "name": "SSDPSRV",
+      "mode": "Manual",
+      "label": "SSDP Discovery",
+      "risk": "medium"
+    },
+    {
+      "name": "upnphost",
+      "mode": "Manual",
+      "label": "UPnP Device Host",
+      "risk": "medium"
+    },
+    {
+      "name": "PcaSvc",
+      "mode": "Manual",
+      "label": "Program Compatibility Assistant",
+      "risk": "low"
+    }
+  ],
+  "telemetryTasks": [
+    {
+      "path": "\\Microsoft\\Windows\\Application Experience\\",
+      "name": "Microsoft Compatibility Appraiser"
+    },
+    {
+      "path": "\\Microsoft\\Windows\\Customer Experience Improvement Program\\",
+      "name": "Consolidator"
+    },
+    {
+      "path": "\\Microsoft\\Windows\\Customer Experience Improvement Program\\",
+      "name": "UsbCeip"
+    },
+    {
+      "path": "\\Microsoft\\Windows\\Feedback\\Siuf\\",
+      "name": "DmClient"
+    },
+    {
+      "path": "\\Microsoft\\Windows\\Feedback\\Siuf\\",
+      "name": "DmClientOnScenarioDownload"
+    },
+    {
+      "path": "\\Microsoft\\Windows\\DiskDiagnostic\\",
+      "name": "Microsoft-Windows-DiskDiagnosticDataCollector"
+    }
+  ],
+  "preserved": [
+    "Microsoft Store",
+    "Xbox / Game Pass",
+    "Bluetooth",
+    "Camera",
+    "Microfone",
+    "Phone Link",
+    "Windows Update",
+    "Defender",
+    "VirtualBox / AMD-V"
+  ],
+  "dangerousCleanupBlocked": [
+    "Microsoft\\Windows\\Recent",
+    "Prefetch",
+    "Event Logs",
+    "dllcache"
+  ]
+}

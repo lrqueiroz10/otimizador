@@ -1,0 +1,40 @@
+﻿SUPER OPTIMIZER V3.6.1 SMART STUDIO RC8
+========================================
+
+CORREÇÕES A PARTIR DOS TESTES REAIS
+------------------------------------
+- Corrigido CleanupAnalyze no Windows PowerShell 5.1: removido Generic.List -> @() que podia gerar "Os tipos de argumento não correspondem".
+- O Launcher agora inclui CleanupAnalyze, DiagnosticQuick e WindowsStudioStatus no smoke-test antes de abrir a interface.
+- Show-Operation passa o resultado real do Worker para relatórios pós-operação.
+- WinGet passa a reler stdout/stderr explicitamente como UTF-8 e captura ExitCode após WaitForExit/Refresh.
+- Opção --include-unknown continua manual e desmarcada por padrão.
+
+WINDOWS STUDIO
+--------------
+- Os 7 módulos ficam visíveis e selecionáveis.
+- Aplicar selecionados cria um snapshot único antes da operação.
+- Desfazer última aplicação retorna exatamente ao snapshot anterior.
+- Restaurar selecionados retorna somente os módulos marcados aos backups originais conhecidos.
+- Restaurar todos ao original continua disponível.
+- Botão "Ver TODAS as alterações" detalha Registro, serviços, tarefas e energia alterados.
+- Botão "Selecionar última sessão" reaproveita os módulos da última aplicação.
+- Snapshot refeito com arrays compatíveis com Windows PowerShell 5.1.
+
+ARMAZENAMENTO
+-------------
+- "Analisar armazenamento" aparece no Dashboard, Limpeza / Armazenamento e Manutenção.
+- A análise mostra espaço livre do disco e estimativa das áreas seguras mensuráveis.
+
+DIAGNÓSTICO
+-----------
+- A aba mostra resumo atual imediatamente quando o status está disponível.
+- CARREGAR DIAGNÓSTICO gera um relatório legível somente leitura.
+- Exibe também erros persistentes recentes de inicialização/interface.
+- Auditoria de State, relatório completo, Auto-Teste e Logs continuam disponíveis.
+
+AUTO-TESTE
+----------
+- 78 rotas esperadas no Engine.
+- 77 rotas em dry-run genérico; PerGameRemove continua contextual.
+- Novos testes para armazenamento PS5.1, WinGet UTF-8/ExitCode, Studio selecionável, snapshot PS5.1 e diagnóstico legível.
+- Novos probes IPC: seleção do Windows Studio e Diagnóstico rápido.

@@ -1,0 +1,6 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.7 — BUILD AUDIT
+
+- Cards vazios tratados nas áreas Dashboard, DNS e Optimization Lab.
+- Versionamento operacional sincronizado para 3.7.2 UI AUDIT RC12.7.
+- Integrity.json regenerado após as alterações.
+- Engine.psm1 e Worker.ps1 mantidos.

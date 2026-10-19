@@ -1,0 +1,11 @@
+﻿SUPER OPTIMIZER V3.8.1 FINAL CANDIDATE RC15.2
+
+CORREÇÃO — PERFIL GAMER + NAVEGADOR
+- Corrigido erro ao clicar em Aplicar GAMER + NAVEGADOR no Windows PowerShell 5.1.
+- Causa: o callback WPF acessava $gamerWeb, variável local de Show-Profiles que já podia ter saído de escopo quando o clique ocorria.
+- Sintoma: exceção de valor nulo propagada e embrulhada pelo ShowDialog da janela principal.
+- Solução: todas as referências dos CheckBoxes são materializadas na criação da página e persistidas no Tag do botão Aplicar.
+- O callback agora recebe o contexto pelo próprio sender, sem GetNewClosure e sem fechamento dinâmico.
+- Validação fail-fast detecta qualquer controle XAML ausente antes de exibir a página.
+- Erros do callback passam a ser capturados com contexto específico do perfil, em vez de derrubar o ShowDialog principal.
+- Nenhuma lógica do Engine, rollback, serviços, VBS ou energia foi alterada nesta correção.

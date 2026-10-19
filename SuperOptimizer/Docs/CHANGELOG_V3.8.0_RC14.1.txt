@@ -1,0 +1,7 @@
+﻿SUPER OPTIMIZER V3.8.0 FINAL CANDIDATE RC14.2 — SELF-TEST / FAIL-SAFE POLISH
+
+- Corrige dois falsos negativos do AUTO-TESTE da RC14.
+- Write-SOProgress agora possui fail-safe externo explícito: qualquer falha de telemetria retorna sem cancelar a ação real.
+- Presets do Optimization Lab permanecem cumulativos e agora a função é null-safe; preset só marca e nunca desmarca módulos existentes.
+- Auto-Teste deixou de depender de strings frágeis/expansão acidental de $true e passa a validar a estrutura real das funções.
+- Nenhum recurso novo foi adicionado; foco exclusivo em fechamento da RC14.

@@ -1,0 +1,23 @@
+SUPER OPTIMIZER V3.8.0 FINAL
+
+Release consolidada após a linha RC14.
+
+Principais destaques:
+- Perfis Universal / Agressivo / Extremo + estado ORIGINAL.
+- Rollback por MachineGuid e Optimization Lab reversível 32/32.
+- State Intelligence: Antes x Depois, histórico, Health, State Manager e pós-reboot.
+- Export/Import de seleção e perfis personalizados.
+- Diagnóstico exportável TXT/JSON.
+- Limpeza segura com proteções de Recent, Prefetch, Event Logs, Downloads, Windows.old e navegadores.
+- PowerShell 5.1 + WPF com UI auditada para DPI/layout e cards estáticos nas áreas sensíveis.
+- Auto-Teste final ampliado; baseline RC14.2 aprovado 154/154 no Windows real.
+
+Correções específicas da promoção FINAL:
+- Estado & histórico do Dashboard não usa mais card dinâmico suscetível a renderização vazia.
+- Histórico usa DataGrid escuro + virtualização e resolve logs por caminho relativo ao State.
+- Painéis de Perfis personalizados e Exportação/suporte migrados para XAML estático.
+- Rotas V3.8 persistentes respeitam DRY-RUN.
+- Rollback individual por jogo não recria chave de Registro já existente.
+
+Importante ao atualizar:
+PRESERVE a pasta SuperOptimizer\State se quiser manter backups, rollback, histórico e perfis personalizados da máquina.

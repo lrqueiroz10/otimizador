@@ -1,0 +1,9 @@
+﻿SUPER OPTIMIZER V3.8.1 FINAL CANDIDATE RC15.1
+
+PERFIL GAMER + NAVEGADOR — IMPRESSÃO PERSONALIZÁVEL
+- Impressora / Print Spooler agora aparece em "Recursos que eu uso — marque para PRESERVAR".
+- Marcada por padrão: impressão permanece intacta.
+- Desmarcada: somente este perfil desativa o serviço Spooler, com backup original obrigatório e rollback pelo mecanismo existente de serviços.
+- Reaplicar o perfil com Impressora marcada restaura primeiro as camadas anteriores/serviços a partir do State antes de aplicar a nova seleção.
+- Aviso explícito informa impacto em impressoras USB/rede e Microsoft Print to PDF.
+- Áudio, Store/Xbox, Bluetooth, câmera/mic, Phone Link, Windows Update e Defender continuam sempre preservados.

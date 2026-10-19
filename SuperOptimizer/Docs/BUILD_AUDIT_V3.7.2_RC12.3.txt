@@ -1,0 +1,22 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.3 — BUILD AUDIT
+
+Base funcional: RC12.2, que no Windows real do usuário concluiu 126/126 no Auto-Teste antes deste passe visual.
+
+Escopo desta build:
+- Apenas UI/layout, versionamento, SelfTest textual e documentação.
+- Engine.psm1: byte a byte idêntico à RC12.2.
+- Worker.ps1: byte a byte idêntico à RC12.2.
+- Nenhuma rota, tweak, snapshot ou rollback funcional alterado.
+
+Validações executadas fora do Windows:
+- Config.json parseado com sucesso.
+- MainWindow.xaml parseado como XML com sucesso.
+- Integrity.json regenerado e 7/7 hashes SHA-256 conferidos.
+- Config/XAML/Launcher/BAT/SelfTest sincronizados em 3.7.2 UI AUDIT RC12.3.
+- Nenhuma referência RC12.2 permanece nos arquivos operacionais versionados.
+- Funções do App.ps1 sem nomes duplicados.
+- Helpers de grid, Smart Care compacto, KPI 2x2, DNS 2x2 e grades de limpeza presentes.
+
+Teste ainda necessário:
+- Rodar o Auto-Teste no Windows PowerShell 5.1 real e confirmar 126/126 novamente.
+- Conferir visualmente Dashboard, Central de Limpeza e DNS / Rede na largura normal e próxima da largura mínima.

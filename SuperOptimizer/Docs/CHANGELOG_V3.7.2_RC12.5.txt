@@ -1,0 +1,11 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.5 — BUTTON MATRIX HOTFIX
+
+Escopo desta build: SOMENTE renderização dos grupos de botões que continuaram vazios no Windows PowerShell 5.1 real.
+
+- DNS / Rede: Ferramentas nativas / recuperação agora usa Grid explícito 2x2 e botões reforçados.
+- Dashboard: Atualizações de aplicativos agora usa Grid explícito 2 colunas e botões reforçados.
+- Dashboard: Atalhos do Windows agora usa Grid explícito 3 colunas e botões reforçados.
+- Optimization Lab: Desfazer / restaurar agora usa Grid explícito 3 colunas e botões reforçados.
+- A moldura visual é parte do próprio Content do Button, reduzindo dependência do template/tema do WPF.
+- Engine.psm1 e Worker.ps1 não foram alterados.
+- O checkbox órfão do ponto de restauração NÃO faz parte deste hotfix; será tratado separadamente após validar os botões.

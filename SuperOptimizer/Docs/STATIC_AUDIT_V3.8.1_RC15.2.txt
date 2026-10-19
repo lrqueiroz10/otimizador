@@ -1,0 +1,30 @@
+﻿SUPER OPTIMIZER V3.8.1 FINAL CANDIDATE RC15.2 — AUDITORIA ESTÁTICA
+
+Escopo: hotfix do callback WPF do perfil Gamer + Navegador. Engine e Worker preservados.
+
+[OK] Versão Config RC15.2
+[OK] Versão XAML RC15.2
+[OK] Versão Launcher RC15.2
+[OK] Versão BAT RC15.2
+[OK] Versão SelfTest RC15.2
+[OK] Handler usa Tag persistente
+[OK] Handler não consulta gamerWeb no clique
+[OK] Controles validados fail-fast
+[OK] Callback captura erro localmente
+[OK] Sem GetNewClosure
+[OK] Engine não alterado funcionalmente
+[OK] Worker não alterado
+[OK] Spooler fora do catálogo geral
+[OK] Rota Gamer presente
+[OK] PreservePrinter presente no Engine
+[OK] Novo teste de regressão presente
+[OK] Integrity.json 7/7
+[OK] MainWindow.xaml XML válido
+[OK] App sem funções duplicadas
+[OK] Engine sem funções duplicadas
+[OK] Bloqueio /ResetBase
+[OK] Bloqueio DisableAntiSpyware
+[OK] Bloqueio useplatformclock
+[OK] Bloqueio disabledynamictick
+
+RESULTADO: 24/24 verificações aprovadas

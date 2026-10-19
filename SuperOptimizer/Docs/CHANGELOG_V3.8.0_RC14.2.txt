@@ -1,0 +1,8 @@
+﻿SUPER OPTIMIZER V3.8.0 FINAL CANDIDATE RC14.2 — PERFIS RESPONSIVOS + SELFTEST HARDENING
+
+- Tela Perfis: Aplicar e Comparar passam a ficar empilhados, sem coluna fixa de 130 px.
+- Corrige clipping observado em DPI/escala e janelas estreitas.
+- Leitura de progress.json passa a usar FileShare.ReadWrite explicitamente também na UI.
+- Auto-Teste de progresso passa a validar o contrato real, sem depender de comentário textual.
+- Auto-Teste de caminho explícito do PowerShell usa regex estrutural em Launcher/BAT.
+- Versionamento operacional sincronizado em RC14.2.

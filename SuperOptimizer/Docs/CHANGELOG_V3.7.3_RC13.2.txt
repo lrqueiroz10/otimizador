@@ -1,0 +1,13 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.2 — EMPTY CARD AUDIT
+
+Auditoria visual focada em todas as caixas vazias reportadas no Windows real.
+
+- Manutenção: Diagnóstico, Reparo e Update/Armazenamento foram consolidados em um único card composto.
+- Gaming: Prioridade por jogo foi incorporada ao card Gaming; a aba Jogos priorizados deixou de usar um Border intermediário.
+- Virtualização: aviso sobre VirtualBox/segurança foi incorporado ao card principal.
+- Rollback: Backups/State e o botão para abrir a pasta foram incorporados ao card principal.
+- Diagnóstico: erros recentes foram incorporados ao Resumo; Relatórios/State foram incorporados ao card Leitura e testes.
+- Serviços: ações de aplicar/restaurar foram incorporadas ao mesmo card da tabela.
+- Perfis: a nota Qual usar? deixou de criar um card secundário.
+- Versionamento operacional sincronizado integralmente em RC13.2.
+- Engine.psm1 e Worker.ps1 não foram alterados.

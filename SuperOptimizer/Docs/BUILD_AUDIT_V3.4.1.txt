@@ -1,0 +1,85 @@
+﻿SUPER OPTIMIZER V3.4.1 FINAL AUDITED RC - AUDITORIA DE BUILD
+========================================================================
+
+ARQUITETURA
+- Arquivos PowerShell auditados estaticamente: 5
+- Funções definidas no Engine: 112
+- Referências internas SO sem definição: 0
+- Rotas do Engine: 51
+- Ações referenciadas pela interface: 50
+- Ações da UI sem rota: 0
+- Funções duplicadas: 0
+- GetNewClosure: 0
+- Delimitadores/strings básicos: OK
+- Config.json: JSON válido
+- MainWindow.xaml: XML válido
+- FindName App -> XAML: OK
+
+INTEGRIDADE DO PACOTE
+- Integrity.json criado com SHA-256 de App, Config, Launcher, XAML, Engine, Worker e SelfTest.
+- Launcher verifica o manifesto antes de abrir a GUI.
+- Auto-Teste verifica o mesmo manifesto.
+
+BACKUP / ROLLBACK
+- Registro: backup original antes da mutação; leitura pós-escrita; Binary/MultiString suportados.
+- Serviços: backup Start/DelayedAutoStart/Running antes da mutação; restauração verificada.
+- Tarefas: estado Enabled salvo antes de desativar; restauração verificada.
+- Hibernação: não altera sem estado original explícito.
+- Defender: não altera sem backup da preferência.
+- Energia: plano original salvo antes de criar/ativar o plano Gaming.
+- VBS/HVCI/BCD: backup completo da camada antes de alteração crítica.
+- StateAudit: JSON + identidade canônica de Registry/Services/Tasks.
+
+PERFIS
+- Universal: restaura camadas agressivas/extremas gerenciadas e reaplica apenas o núcleo universal.
+- Agressivo: remove a camada VBS/Extrema gerenciada antes de aplicar o Agressivo.
+- Extremo: Agressivo + VBS/HVCI/Hypervisor OFF com backup crítico.
+- Ponto de restauração marcado pelo usuário é obrigatório: se falhar, o perfil não prossegue silenciosamente.
+- Políticas secundárias de background são best-effort e viram avisos, não abortos indevidos.
+
+MANUTENÇÃO / LIMPEZA
+- Fail-safe aceita somente raízes explícitas TEMP, Windows Temp, D3DSCache e SoftwareDistribution\Download.
+- Reparse points/junctions são ignorados.
+- Acesso Rápido/Recent não é limpo.
+- Prefetch não é limpo.
+- Event Logs não são limpos.
+- Lixeira é ação separada.
+- Shader cache é ação separada.
+- DISM/SFC não fazem parte da rotina semanal.
+
+WINDOWS UPDATE
+- Stop temporário guarda WasRunning.
+- Snapshot vazio/duplicado/inesperado é recusado.
+- Falha parcial ao parar serviços tenta rollback automático.
+- Cache Update restaura o estado anterior no finally.
+- Rollback geral não inicia serviços de Update sem snapshot prévio.
+
+RAM
+- EmptyStandbyList é opcional e não é distribuído.
+- Uso automático em perfis/manutenção semanal: bloqueado.
+- Validação estrutural MZ, SHA-256 e Authenticode status.
+- HashMismatch é recusado.
+- Timeout de 30 segundos por comando.
+- Limpeza completa exige confirmação explícita.
+
+CONCORRÊNCIA / IPC
+- UI bloqueia segunda operação ativa.
+- Worker usa lock exclusivo entre processos para operações mutáveis.
+- Cada rota deve retornar exatamente um resultado estruturado.
+- WarningCount/WarningMessages seguem no resultado.
+- Progresso da UI não pode abortar a operação real.
+
+AUTO-TESTE NO WINDOWS
+- parser oficial PowerShell para .ps1/.psm1
+- WPF/XAML real
+- Config e manifesto SHA-256
+- ferramentas nativas/cmdlets
+- State gravável
+- bloqueios estáticos de segurança
+- todas as rotas em DRY-RUN
+- probes Worker/JSON/IPC em processo separado
+
+LIMITAÇÃO DA AUDITORIA OFFLINE
+Este ambiente não é Windows; portanto Registro, serviços, WPF, DISM, SFC, BCD,
+Defender e EmptyStandbyList não foram executados de forma mutável aqui. A segunda
+camada de validação é o AUTO-TESTE embutido, executado no Windows antes do uso real.

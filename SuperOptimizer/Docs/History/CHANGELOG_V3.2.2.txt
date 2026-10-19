@@ -1,0 +1,27 @@
+﻿SUPER OPTIMIZER V3.2.2 POLISHED
+=================================
+
+INTERFACE
+- "REPARAR Windows" foi retirado do meio das ferramentas de diagnóstico.
+- A página Manutenção agora possui cinco blocos lógicos:
+  1. Rotina segura
+  2. Diagnóstico e integridade
+  3. Reparo e limpeza avançada
+  4. Windows Update e armazenamento
+  5. Memória RAM
+- "Abrir State" foi retirado de Diagnóstico.
+- A pasta State agora fica em Rollback, onde faz sentido conceitualmente:
+  "Abrir pasta de backups (State)".
+- Diagnóstico ficou mais limpo: AUTO-TESTE, Logs e README.
+
+ORTOGRAFIA
+- Revisão de acentuação e grafia na interface.
+- Revisão das mensagens do Engine.
+- Revisão da saída do AUTO-TESTE.
+- Revisão de labels de serviços no Config.json.
+- Cabeçalho WPF atualizado.
+
+FUNCIONALIDADE
+- Nenhuma rota do Engine foi removida.
+- Perfis Universal, Agressivo e Extremo não foram alterados.
+- As proteções da V3.2.1 foram mantidas.

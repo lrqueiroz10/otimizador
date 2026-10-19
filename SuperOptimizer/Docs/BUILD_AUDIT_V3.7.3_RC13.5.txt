@@ -1,0 +1,7 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.5 — BUILD AUDIT
+
+- Engine alterado somente em Restore-SORegistrySnapshotValue para robustez de rollback.
+- App/UI/Worker mantêm a arquitetura da RC13.4.
+- Versionamento operacional sincronizado.
+- Integrity.json regenerado após alterações.
+- Novo teste estrutural cobre rollback idempotente do Registro.

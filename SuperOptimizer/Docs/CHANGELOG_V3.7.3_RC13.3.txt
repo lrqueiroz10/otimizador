@@ -1,0 +1,8 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.3 — UI POLISH + SELF-TEST STATUS FIX
+
+- Corrige rebarbas/espaço morto em Manutenção, Gaming, Virtualização, Rollback e Diagnóstico.
+- Audita e converte também Serviços para fragmento XAML estático.
+- Gaming/Jogos priorizados ganha tabs e DataGrid com tema escuro explícito.
+- Sub-seções compostas deixam de ser anexadas dinamicamente após UniformGrid, padrão que falhou visualmente no PowerShell 5.1 real.
+- Janela do Auto-Teste interpreta RESULTADO: N/N como aprovado mesmo quando Process.ExitCode chega vazio no PowerShell 5.1.
+- Engine.psm1 e Worker.ps1 preservados.

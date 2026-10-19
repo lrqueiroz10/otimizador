@@ -1,0 +1,13 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.2 — UI RENDERING HOTFIX
+
+CORREÇÕES
+- Optimization Lab: a caixa "Criar ponto de restauração antes de aplicar" não usa mais string crua como Content. O texto passa a ser um TextBlock explícito, evitando a caixa órfã observada no Windows PowerShell 5.1/WPF.
+- Botões: ActionButtonStyle agora possui ControlTemplate explícito com Border ligado a Background/BorderBrush/BorderThickness. Isso evita botões que aparecem apenas como texto flutuante em algumas telas, especialmente DNS / Rede.
+- Mantidas as cores de risco: MÉDIO amarelo e EXPERIMENTAL vermelho.
+- Auto-Teste: os guards visuais existentes foram fortalecidos sem aumentar o número total de testes.
+- Versionamento operacional sincronizado para 3.7.2 UI AUDIT RC12.2.
+
+SEGURANÇA / ARQUITETURA
+- Nenhuma rota do Engine foi alterada nesta revisão.
+- Nenhum tweak novo foi adicionado.
+- Rollback, State, snapshots V4 e proteções de limpeza permanecem inalterados.

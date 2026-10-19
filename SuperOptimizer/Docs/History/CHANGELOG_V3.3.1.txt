@@ -1,0 +1,22 @@
+﻿SUPER OPTIMIZER V3.3.1 AUTO-TEST FIX
+====================================
+
+CORREÇÃO PRINCIPAL
+- O V3.3 colocou PerGameRemove dentro do dry-run genérico.
+- PerGameRemove exige um backup real por executável antes de restaurar.
+- Em uma instalação normal, TestGame.exe não possui esse backup, então a rota
+  falhava por design e fazia o AUTO-TESTE parecer quebrado.
+
+CORREÇÃO
+- PerGameRemove saiu do grupo que precisa "terminar com sucesso".
+- Ganhou teste contextual próprio: o Auto-Teste confirma que a proteção contra
+  restauração sem backup está funcionando.
+
+ROBUSTEZ DO AUTO-TESTE
+- Resultado é escrito progressivamente após cada teste.
+- stdout e stderr são capturados em State\Runtime.
+- Se o processo morrer antes de gerar relatório, a interface mostra o erro real.
+- Timeout de 180 segundos evita janela eternamente parada.
+- O status agora exibe o ExitCode quando houver falha.
+
+Nenhum perfil, tweak, serviço ou rotina de manutenção foi alterado nesta versão.

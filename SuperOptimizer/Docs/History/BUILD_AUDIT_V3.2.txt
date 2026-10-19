@@ -1,0 +1,15 @@
+﻿SUPER OPTIMIZER V3.2.2 POLISHED - BUILD AUDIT
+===================================================
+JSON: OK
+XAML XML: OK
+PowerShell files bracket scan: OK
+Engine routes: 49
+UI action references validated: 45
+Status scalar Count bug: REMOVED
+Operation closure Start-StatusRefresh bug: REMOVED
+Dangerous cleanup tokens: BLOCKED
+New maintenance actions: OK
+Prioritized games UI/actions: OK
+Launcher preflight Status + separate Worker: ENABLED
+
+OBS: o parser oficial PowerShell e o worker real ainda são executados no Windows pelo Launcher antes da GUI abrir.

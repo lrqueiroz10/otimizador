@@ -1,0 +1,21 @@
+﻿SUPER OPTIMIZER V3.8.0 FINAL R1 — ADENDO DE AUDITORIA
+
+ACHADO
+O Auto-Teste da V3.8.0 FINAL reportou 159/160. O único teste reprovado foi "Histórico com tema escuro e virtualização".
+
+CAUSA RAIZ
+A implementação estava correta. O teste usava uma string PowerShell em aspas duplas contendo $grid e $Window; durante a execução do SelfTest essas variáveis eram expandidas, alterando o texto procurado no App.ps1 e produzindo falso negativo.
+
+CORREÇÃO
+O teste passou a usar literal sem expansão e agora valida explicitamente:
+- DarkDataGridHeaderStyle
+- DarkDataGridCellStyle
+- DarkDataGridRowStyle
+- EnableRowVirtualization=$true
+- EnableColumnVirtualization=$true
+
+ESCOPO
+Somente SelfTest/versionamento/documentação/Integrity foram alterados. Engine.psm1, Worker.ps1 e App.ps1 permanecem byte a byte iguais à V3.8.0 FINAL.
+
+RISCO RESIDUAL
+Nenhum achado funcional novo foi introduzido por esta revisão. O resultado 160/160 ainda deve ser confirmado no Windows PowerShell 5.1 real.

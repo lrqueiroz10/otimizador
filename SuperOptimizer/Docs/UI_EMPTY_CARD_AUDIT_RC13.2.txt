@@ -1,0 +1,17 @@
+﻿AUDITORIA DE CARDS VAZIOS — RC13.2
+
+Páginas revisadas:
+Dashboard — WinGet/atalhos críticos já usam XAML estático; Smart Care sempre recebe texto de estado.
+Perfis — cards de perfil preservados; card explicativo secundário removido.
+Limpeza — todos os cards contêm títulos e ações; mantidos por já terem renderização confirmada.
+Manutenção — cards secundários vazios eliminados por consolidação.
+Otimizar Windows — blocos Aplicar/Inspecionar e Desfazer/Restaurar permanecem em XAML estático.
+DNS/Rede — ferramentas nativas permanecem em XAML estático.
+Gaming — card secundário de Prioridade por jogo eliminado; lista sem Border intermediário.
+Serviços — tabela e ações consolidadas em um único card.
+GPU/Update — único card de ações; sem card secundário.
+Virtualização — nota incorporada ao card principal.
+Rollback — State incorporado ao card principal.
+Diagnóstico — erros e relatórios incorporados aos cards principais.
+
+Objetivo: nenhuma caixa deve existir apenas como moldura sem conteúdo útil.

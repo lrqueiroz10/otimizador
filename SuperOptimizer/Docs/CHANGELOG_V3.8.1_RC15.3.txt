@@ -1,0 +1,9 @@
+SUPER OPTIMIZER V3.8.1 FINAL CANDIDATE RC15.3
+
+CORREÇÃO — DETECÇÃO DO PERFIL GAMER + NAVEGADOR
+- A aplicação do perfil passa a verificar o estado usando diretamente as opções escolhidas naquela execução.
+- A classificação pós-aplicação não depende mais da releitura imediata do marcador gamer_browser_profile.json.
+- Se houver divergência real, cada requisito que falhou é registrado individualmente no log (Game Mode, DVR, energia, VBS, Spooler, serviços etc.).
+- O detector usado pelo Dashboard continua capaz de usar o marcador persistente do State.
+- Falha ao salvar o marcador no State agora gera aviso explícito em vez de ficar silenciosa.
+- Nenhum tweak, serviço-alvo, política de privacidade, energia, rollback ou comportamento de impressão/virtualização foi ampliado nesta correção.

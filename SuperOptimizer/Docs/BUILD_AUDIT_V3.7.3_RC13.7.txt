@@ -1,0 +1,11 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.7 — BUILD AUDIT
+
+Foco: falhas observadas no Windows real durante WindowsStudioApplySelection e ProfileExtreme.
+
+Correções verificadas estaticamente:
+- Registro: chave existente não é recriada com New-Item -Force.
+- Rollback geral: mesma regra de escrita segura.
+- powercfg: stderr não encerra a função antes da leitura do ExitCode.
+- Plano Gaming: GUIDs oficiais de Processor/USB/PCIe.
+- Progresso: escrita concorrente tolerante.
+- Proteção de tema: sem AppsUseLightTheme, SystemUsesLightTheme ou VisualFXSetting=2.

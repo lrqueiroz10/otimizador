@@ -1,0 +1,30 @@
+﻿SUPER OPTIMIZER V3.4.1 FINAL AUDITED RC
+========================================
+
+FOCO DESTA BUILD
+- auditoria completa do fluxo UI -> Worker -> Engine -> State/Rollback
+- integridade SHA-256 dos arquivos operacionais antes da GUI abrir
+- Auto-Teste ampliado e progressivo
+- concorrência bloqueada na UI e entre processos
+- backups críticos validados antes de mutações
+
+CORREÇÕES / ENDURECIMENTO
+- snapshot temporário do Windows Update rejeita listas vazias, duplicadas e serviços inesperados
+- pausa parcial do Windows Update tenta desfazer automaticamente o que já foi parado
+- restauração individual de prioridade por jogo remove PerfOptions vazia quando a chave foi criada pelo tweak
+- auditoria State confere identidade hash/nome de backups de Registry, Services e Tasks
+- Rollback completo avisa quando o State possui problemas estruturais e tenta restaurar apenas os itens válidos
+- janela do Auto-Teste avisa antes de ser ocultada enquanto o processo ainda está rodando
+- arquivos de build/scratch não são distribuídos
+
+PRESERVADO
+- Dashboard com ações rápidas
+- ordem visual verde -> azul -> laranja -> vermelho
+- Perfil Universal / Agressivo / Extremo e transição entre perfis
+- Manutenção Semanal Segura
+- integridade/reparo, Update cache, RAM manual, Gaming, serviços, GPU, VBS e Rollback
+- Acesso Rápido/Recent, Prefetch e Event Logs não são limpos
+- EmptyStandbyList continua opcional e nunca entra automaticamente em perfil/manutenção semanal
+
+IMPORTANTE
+Mantenha a pasta State da instalação que já aplicou ajustes se você quiser preservar o rollback original.

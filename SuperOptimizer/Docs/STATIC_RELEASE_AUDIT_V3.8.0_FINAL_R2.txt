@@ -1,0 +1,28 @@
+﻿SUPER OPTIMIZER V3.8.0 FINAL R2 — AUDITORIA ESTÁTICA DE RELEASE
+
+Escopo: revisão observabilidade/logs sobre FINAL R1; sem novos tweaks/perfis.
+
+[OK] Config.json válido
+[OK] Integrity.json válido
+[OK] MainWindow.xaml válido
+[OK] Integrity SHA-256 :: 7/7
+[OK] Versionamento R2 sincronizado
+[OK] Sem rótulo R1 R1
+[OK] App UI sem alteração funcional
+[OK] Progress UI-only suportado
+[OK] DISM/SFC sem barra ASCII duplicada
+[OK] FullClean com resumo por área
+[OK] Espaço liberado com precisão útil
+[OK] Bloqueio /ResetBase
+[OK] Bloqueio DisableAntiSpyware
+[OK] Bloqueio useplatformclock
+[OK] Bloqueio disabledynamictick
+[OK] Bloqueio wevtutil.exe cl
+[OK] Funções únicas Core/Engine.psm1
+[OK] Funções únicas App.ps1
+[OK] Quantidade de testes preservada :: 156 checks estáticos declarados
+[OK] ZIP íntegro :: OK
+
+RESULTADO: 20/20 verificações estáticas aprovadas
+
+Observação: esta auditoria não substitui o AUTO-TESTE no Windows PowerShell 5.1 real.

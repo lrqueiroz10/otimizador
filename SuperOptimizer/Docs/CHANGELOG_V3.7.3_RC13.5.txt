@@ -1,0 +1,8 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.5 — SESSION ROLLBACK HARDENING
+
+- Corrige rollback de Registro do Optimization Lab após teste real no Windows.
+- Não executa mais New-Item -Force sobre uma chave de Registro que já existe; isso podia gerar UnauthorizedAccessException em HKCU\...\Explorer\Advanced.
+- Restauração de valores existentes usa Set-ItemProperty, com fallback para criação do valor se ele tiver desaparecido.
+- Remoção de valores/chaves ausentes ficou idempotente e tolerante a corridas do shell/serviços do Windows.
+- Snapshot com avisos continua preservado para nova tentativa.
+- Novo Auto-Teste estrutural impede regressão desse comportamento.

@@ -1,0 +1,66 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12
+======================================================================
+
+OBJETIVO
+Auditoria estática tela por tela da base recuperada, priorizando clareza visual, separação de responsabilidades e preservação das rotas/rollbacks existentes.
+
+DASHBOARD
+- Mantido como central de Smart Care, status e ações principais.
+- Sem mover manutenção pesada para a inicialização.
+
+PERFIS
+- Mantidos Universal, Agressivo e Extremo em tela própria.
+- O Optimization Lab não é duplicado aqui.
+
+LIMPEZA / ARMAZENAMENTO
+- Mantida análise antes das ações de limpeza.
+- Sem Downloads, Recent/Acesso Rápido, Prefetch ou Event Logs automáticos.
+
+MANUTENÇÃO
+- Mantidos DISM, SFC, CHKDSK e Component Store.
+- Limpeza simples continua fora desta tela para evitar duplicidade.
+
+OTIMIZAR WINDOWS / OPTIMIZATION LAB
+- PROBLEMA RC10: CheckBox vazio e conteúdo visual em StackPanel separado podia renderizar caixas sem texto e áreas enormes no PowerShell 5.1.
+- CORREÇÃO RC12: cada CheckBox contém seu próprio rótulo.
+- As opções ficam compactas; descrição, alvo e risco detalhado ficam no ToolTip.
+- Mantidos 32 módulos e os presets Recomendados, Gaming, Performance, Privacidade, Interface, Serviços e Todos não-experimentais.
+- Mantidos Prévia, Aplicar selecionados, Ver estado atual e catálogo completo.
+- Mantidos DESFAZER ÚLTIMA APLICAÇÃO, RESTAURAR SELECIONADOS e RESTAURAR TODOS AO ORIGINAL.
+
+DNS / REDE
+- DNS Jumper permanece recomendado para benchmark.
+- Super Optimizer mantém status, flush, marcação de revisão e rollback de DNS.
+- Rotas internas legadas de benchmark continuam fora da UI; não foram reintroduzidas visualmente.
+
+GAMING
+- Mantidos ajustes específicos e prioridade por executável.
+
+SERVIÇOS
+- Mantida tabela própria; não duplicada como lista de 30+ itens dentro do Lab.
+
+GPU / WINDOWS UPDATE
+- Corrigido subtítulo obsoleto que dizia existir "Latency Lab próprio".
+- GPU/Update ficam isolados; DNS fica em DNS / Rede.
+
+VIRTUALIZAÇÃO
+- VBS/HVCI/Hypervisor continuam separados devido ao impacto de segurança e compatibilidade.
+- AMD-V/SVM não é desligado por essa tela.
+
+ROLLBACK
+- Mantida centralização da restauração geral.
+- O Lab continua com snapshot V4 escopado à seleção.
+
+DIAGNÓSTICO
+- Auto-Teste e relatórios continuam explícitos; nenhum teste pesado foi recolocado no startup.
+
+VALIDAÇÃO ESTÁTICA DE MÓDULOS
+- UI: 32 IDs.
+- Catálogo Engine: 32 IDs.
+- Todos os 32 IDs possuem rota de aplicação.
+- Todos os 32 IDs possuem caminho de restauração por Registry e/ou estado especial (energia, hibernação, Defender, serviços, tarefas ou Memory Compression).
+
+PENDENTE NO WINDOWS REAL
+- Executar o AUTO-TESTE em Windows 11 / Windows PowerShell 5.1.
+- Confirmar 100% dos testes no ambiente real antes de congelar FINAL.
+- Fazer ciclo pequeno: Game Mode + Efeitos Visuais -> aplicar -> DESFAZER -> reiniciar -> validar estado.

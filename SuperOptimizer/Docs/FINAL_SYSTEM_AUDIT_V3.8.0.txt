@@ -1,0 +1,100 @@
+SUPER OPTIMIZER V3.8.0 FINAL — AUDITORIA FINAL DE SISTEMAS
+Data da consolidação: 2026-09-30
+Escopo: PowerShell 5.1, WPF, Engine, Worker/IPC, rollback/State, perfis, limpeza, Optimization Lab, DNS/WinGet, diagnóstico, State Intelligence, UX e integridade do pacote.
+
+1. BASELINE DE EXECUÇÃO REAL
+- A RC14.2 fornecida para auditoria concluiu 154/154 testes no Windows PowerShell 5.1 real.
+- Parser oficial PowerShell, hashes SHA-256, rotas, Worker/IPC, DRY-RUN, probes somente leitura, State, rollback, perfis e proteções de limpeza estavam aprovados.
+
+2. ACHADOS DA AUDITORIA FINAL E CORREÇÕES
+[CORRIGIDO][MÉDIO] Dashboard — card "Estado & histórico" podia aparecer vazio no WPF real.
+  Correção: painel convertido para XAML estático 2x2, seguindo a estratégia que já eliminou regressões anteriores de cards vazios.
+
+[CORRIGIDO][BAIXO] Histórico — DataGrid novo não usava explicitamente o tema escuro/virtualização.
+  Correção: estilos DarkDataGridHeader/Cell/Row aplicados e virtualização de linha/coluna ativada.
+
+[CORRIGIDO][MÉDIO] Painéis V3.8 recém-adicionados ainda dependiam de Grid dinâmico em áreas sensíveis.
+  Correção: "Configuração / Perfis personalizados" e "Exportação & suporte" convertidos para XAML estático.
+
+[CORRIGIDO][MÉDIO] DRY-RUN incompleto para recursos V3.8 persistentes.
+  Correção: salvar/remover perfil personalizado e exportar diagnóstico respeitam DryRun e não escrevem arquivos durante testes.
+  Cobertura: 87 rotas passam pelo DRY-RUN geral; PerGameRemove permanece em teste contextual separado = 88/88 rotas cobertas.
+
+[CORRIGIDO][MÉDIO] Restore individual de prioridade por jogo ainda usava New-Item -Force sobre chave que poderia existir.
+  Correção: restauração segue o padrão seguro já adotado no rollback de Registro — só cria a chave quando ausente; caso contrário usa Set-ItemProperty/New-ItemProperty conforme o tipo.
+
+[CORRIGIDO][BAIXO] Portabilidade do Histórico.
+  Correção: eventos novos armazenam também LogRelative dentro de State. Ao mover o programa com a pasta State, a UI tenta o caminho absoluto antigo e depois resolve o caminho relativo portátil.
+
+3. SEGURANÇA / REVERSIBILIDADE
+- Backup antes da primeira alteração preservado.
+- Registro crítico, serviços, tarefas, energia, Defender, hibernação e BCD possuem rollback conhecido.
+- Serviços são restaurados pelo Service Control Manager nas rotas protegidas.
+- State é isolado por MachineGuid.
+- Ponto de restauração marcado é fail-safe: perfil não prossegue silenciosamente se o Windows não conseguir criá-lo.
+- Optimization Lab usa snapshot V4 escopado aos módulos selecionados.
+- Nenhum uso operacional de DisableAntiSpyware, /ResetBase, useplatformclock ou disabledynamictick.
+- Recent/Acesso Rápido, Prefetch e Event Logs não são tratados como lixo.
+- Tema Claro/Escuro não é modificado pelas otimizações visuais.
+
+4. DESEMPENHO / CONCORRÊNCIA
+- Operações mutáveis usam Worker separado e trava entre processos.
+- Falha de arquivo de progresso é telemetria e não cancela a operação real.
+- Consultas profundas não bloqueiam a abertura da UI.
+- Análise de armazenamento possui limites de tempo/itens.
+- Histórico é limitado a 200 eventos e agora usa DataGrid virtualizado.
+- Status roda sob demanda; o timer da UI apenas supervisiona Worker/timeout e não executa scans pesados continuamente.
+
+5. UI / UX
+- Perfis sem coluna fixa no botão Comparar; ações empilhadas evitam clipping em DPI alto.
+- Cards compostos problemáticos foram migrados para XAML estático.
+- Tabelas principais usam tema escuro explícito.
+- Risk labels do Optimization Lab: MÉDIO amarelo, EXPERIMENTAL vermelho.
+- ORIGINAL / ANTES DO SUPER OPTIMIZER exposto na tela Perfis e reutiliza RestoreAll.
+
+6. V3.8 STATE INTELLIGENCE
+- Antes x Depois.
+- Histórico persistente com acesso a log e comparação.
+- Export/Import de seleção do Optimization Lab.
+- Perfis personalizados.
+- Health sem score artificial.
+- Estado visual por módulo.
+- Comparação de perfis.
+- State Manager / portabilidade por MachineGuid.
+- Diagnóstico TXT/JSON.
+- Confirmação pós-reboot.
+
+7. INTEGRIDADE E COBERTURA ESTÁTICA DA FINAL
+- Funções duplicadas: nenhuma.
+- Rotas Engine: 88.
+- Ações UI: todas mapeadas para rota válida.
+- Referências internas SO*: todas resolvidas.
+- Config: 37 serviços únicos, modos/riscos válidos.
+- XAML principal: XML válido.
+- Fragmentos XAML embutidos: todos válidos na auditoria estática.
+- Integrity.json: regenerado após as correções finais.
+- Worker.ps1: sem alterações funcionais nesta consolidação final.
+
+8. AUTO-TESTE DA FINAL
+- Baseline real anterior: 154/154 na RC14.2.
+- A FINAL adiciona 6 regressões estruturais novas:
+  1) Dashboard Estado & histórico estático;
+  2) Histórico com tema escuro e virtualização;
+  3) Painéis V3.8 críticos em XAML estático;
+  4) Persistência V3.8 respeita DRY-RUN;
+  5) PerGame restore não recria chave existente;
+  6) Histórico portátil.
+- Alvo esperado no Windows real: 160/160.
+
+9. RISCO RESIDUAL / LIMITAÇÕES ACEITAS
+- Checkpoint-Computer depende da Proteção do Sistema do próprio Windows.
+- Políticas protegidas por ACL podem ser registradas como aviso e ignoradas quando marcadas como opcionais.
+- DNS Jumper é opcional e não é redistribuído.
+- Atualizador automático do próprio Super Optimizer continua deliberadamente fora da V3.8 FINAL; implementar de forma segura exige canal oficial, manifesto assinado/hash e rollback de atualização.
+
+CONCLUSÃO
+Nenhum achado CRÍTICO ou ALTO permanece aberto na auditoria estática da V3.8.0 FINAL. Os últimos achados de severidade MÉDIA/BAIXA foram tratados nesta consolidação. O núcleo conserva as proteções e os comportamentos validados no Windows real, com regressões adicionais incorporadas ao Auto-Teste final.
+
+APÊNDICE — AUDITORIA ESTÁTICA DO PACOTE FINAL
+- 51 verificações independentes executadas após as últimas correções: 51/51 aprovadas.
+- Incluíram: duplicidade de funções, mapeamento UI->Engine, referências internas, cobertura DRY-RUN, Config, políticas preservadas, padrões proibidos, XML/XAML, versão, Integrity 7/7, layout estático das áreas sensíveis, portabilidade do histórico, segurança do PerGame restore e balanço léxico dos scripts modificados.

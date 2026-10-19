@@ -1,0 +1,23 @@
+﻿SUPER OPTIMIZER V3.8.0 FINAL CANDIDATE RC14.2 — STATE INTELLIGENCE
+
+NOVO
+- Comparador Antes x Depois para operações monitoradas.
+- Histórico persistente por MachineGuid, com log e delta da ação.
+- Exportar/importar seleção do Optimization Lab em JSON.
+- Perfis personalizados salvos no State.
+- Saúde objetiva sem pontuação artificial.
+- Estado visual por módulo: ATIVO / PADRÃO / DIFERENTE / NÃO SUPORTADO.
+- Comparação do perfil atual com Universal/Agressivo/Extremo antes de aplicar.
+- Backup / State Manager com primeiro backup, tamanho, integridade e categorias.
+- Modo portátil documentado com isolamento por MachineGuid.
+- Exportação de diagnóstico em TXT/JSON.
+- Relatório pós-reboot com confirmação do perfil/estado após reinicialização.
+- Manutenção Semanal com resumo de removidos/ignorados, sem dezenas de linhas por arquivo bloqueado.
+
+ADIADO DELIBERADAMENTE
+- Atualizador automático do próprio Super Optimizer. Exige canal de distribuição, assinatura/verificação e política de atualização; não foi inserido silenciosamente na Final Candidate.
+
+SEGURANÇA
+- Filosofia de backup antes de mutação mantida.
+- Rollback/State continuam isolados por MachineGuid.
+- Tweaks destrutivos/placebo permanecem bloqueados.

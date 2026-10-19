@@ -1,0 +1,38 @@
+﻿SUPER OPTIMIZER V3.6.0 SMART CARE RC7
+====================================
+
+FOCO DA VERSÃO
+- remover redundâncias visuais
+- tornar Limpeza uma área principal e hierárquica
+- criar recomendações persistentes com base em tempo/estado real
+- adicionar atualização de aplicativos via WinGet
+- aposentar o benchmark DNS próprio da interface e integrar DNS Jumper como ferramenta recomendada
+
+SMART CARE
+- Manutenção Semanal recomendada com 7 dias
+- RAM >=85% gera recomendação de Standby RAM; >=92% vira atenção
+- Integridade >30 dias vira recomendação opcional
+- WinGet: checagem recomendada a cada 7 dias
+- DNS: revisão recomendada a cada 30 dias ou após mudança de rede/ISP
+- disco <15% livre gera recomendação de limpeza; <10% vira atenção
+- reinicialização pendente é sinalizada
+
+LIMPEZA
+1. Semanal: TEMP usuário + Windows Temp + DNS
+2. Completa: Semanal + Shader DirectX + cache Windows Update + Lixeira
+3. Final/Profunda: Completa + Delivery Optimization + WER ReportQueue/Archive + DISM StartComponentCleanup; Standby RAM só se >=85%
+
+SEMPRE PRESERVADO
+Downloads, documentos pessoais, Recent/Acesso Rápido, Prefetch, Event Logs, Windows.old e dados/perfis de navegadores.
+
+APLICATIVOS
+- Buscar atualizações via winget upgrade
+- Atualizar todos via winget upgrade --all
+- não usa --include-unknown nem --include-pinned por padrão
+
+DNS
+- DNS Jumper é agora o benchmark recomendado
+- botão para abrir a ferramenta se DnsJumper.exe estiver em Tools
+- botão para abrir a página oficial
+- status/flush/rollback nativo permanecem
+- benchmark UDP próprio não aparece mais na interface

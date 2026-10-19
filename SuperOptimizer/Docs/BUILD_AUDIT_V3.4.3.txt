@@ -1,0 +1,26 @@
+﻿SUPER OPTIMIZER V3.4.3 NATIVE RAM RC3 - OFFLINE AUDIT
+================================================
+
+Correção da RAM:
+- dependência obrigatória de EmptyStandbyList.exe: REMOVIDA
+- método nativo via SystemMemoryListInformation: PRESENTE
+- SeProfileSingleProcessPrivilege: PRESENTE
+- comandos nativos 2/3/4: PRESENTES
+- fallback externo: OPCIONAL + VALIDADO + TIMEOUT
+- interface não bloqueia por falta do executável externo: OK
+- limpeza continua manual-only: OK
+
+Estrutura:
+- rotas Engine: 51
+- ações UI encontradas: 47
+- UI sem rota: 0
+- funções Engine: 118
+- referências SO não resolvidas: 0
+- XAML XML: OK
+- Config JSON: OK
+- Integrity.json: 7/7 hashes gerados e conferidos
+- GetNewClosure: 0
+
+Limitação:
+O ambiente de build não executa PowerShell/WPF/NT API do Windows.
+O Auto-Teste da aplicação valida o parser oficial, carregamento real do P/Invoke, Worker e DRY-RUN no Windows do usuário.

@@ -1,0 +1,13 @@
+﻿SUPER OPTIMIZER V3.4.2 FINAL AUDITED RC2
+===========================================
+
+CORREÇÕES DESTA BUILD
+- Segunda abertura do programa não é mais tratada como erro.
+- O Launcher mantém a proteção de instância única, mas sinaliza a instância existente.
+- A janela já aberta é restaurada/ativada quando o usuário abre o BAT novamente.
+- O Auto-Teste ganhou validação do handoff de instância única.
+- O texto intermediário do Auto-Teste agora diz claramente PROGRESSO PARCIAL e informa que o teste ainda está em execução.
+
+SEM ALTERAÇÕES NOS TWEAKS
+- Engine, perfis e políticas de otimização permanecem funcionalmente iguais à V3.4.1.
+- Worker e bloqueio de operações mutáveis permanecem intactos.

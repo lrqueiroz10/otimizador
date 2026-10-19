@@ -1,0 +1,23 @@
+﻿SUPER OPTIMIZER V3.4.3 NATIVE RAM RC3
+=========================================
+
+CORREÇÃO PRINCIPAL
+- Removida a dependência obrigatória de EmptyStandbyList.exe.
+- Limpar Standby RAM e Limpeza COMPLETA agora funcionam pelo método nativo do Windows.
+- O executável externo em Tools passou a ser apenas fallback opcional e validado.
+
+MÉTODO NATIVO
+- NtSetSystemInformation(SystemMemoryListInformation)
+- SeProfileSingleProcessPrivilege
+- Standby: MemoryPurgeStandbyList
+- Completa: MemoryEmptyWorkingSets + MemoryFlushModifiedList + MemoryPurgeStandbyList
+
+INTERFACE
+- Removido o bloqueio que exigia EmptyStandbyList.exe antes de abrir a limpeza.
+- Dashboard e Manutenção agora informam que o método nativo é o padrão.
+- EmptyStandbyList.exe em Tools é identificado somente como fallback.
+
+AUTO-TESTE
+- valida carregamento da API nativa sem executar limpeza real
+- mantém validação do fallback externo caso ele exista
+- Worker RAM continua testado somente em DRY-RUN

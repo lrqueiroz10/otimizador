@@ -1,0 +1,23 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.5 — BUILD AUDIT
+
+Objetivo: isolar e corrigir SOMENTE os grupos de botões que ainda renderizavam vazios no Windows PowerShell 5.1 real.
+
+VALIDAÇÕES ESTÁTICAS
+- Config.json: OK
+- MainWindow.xaml (XML): OK
+- Integrity.json: 7/7 hashes conferidos
+- Versionamento operacional: RC12.5 sincronizado
+- Funções duplicadas no App.ps1: 0
+- Engine.psm1: byte por byte inalterado vs RC12.4
+- Worker.ps1: byte por byte inalterado vs RC12.4
+- New-ReliableButton presente: OK
+- New-ReliableActionButton presente: OK
+- New-MatrixActionCard/Add-MatrixButton presentes: OK
+- DNS nativo migrado para Matrix + Reliable buttons: OK
+- WinGet migrado para Matrix + Reliable buttons: OK
+- Atalhos do Windows migrados para Matrix + Reliable buttons: OK
+- Rollback do Optimization Lab migrado para Matrix + Reliable buttons: OK
+
+IMPORTANTE
+O checkbox órfão do ponto de restauração não foi tratado nesta build por solicitação de corrigir primeiro os botões.
+O parser oficial do Windows PowerShell 5.1 e o WPF real ainda precisam ser validados no notebook pelo Auto-Teste/abertura da interface.

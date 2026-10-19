@@ -1,0 +1,19 @@
+﻿RC13.3 UI POLISH AUDIT
+
+Páginas auditadas:
+- Dashboard: cards críticos já estáticos; mantido.
+- Perfis: cards simples; mantido.
+- Limpeza: cards independentes simples; mantido.
+- Manutenção: convertido integralmente para XAML estático composto.
+- Otimizar Windows: aplicar/rollback já estáticos; mantido.
+- DNS/Rede: ferramentas nativas já estáticas; mantido.
+- Gaming: Ajustes e Jogos priorizados convertidos para XAML estático; DataGrid escuro.
+- Serviços: tabela + ações convertidas para XAML estático; DataGrid escuro.
+- GPU/Update: card simples; mantido.
+- Virtualização: card composto convertido para XAML estático.
+- Rollback: card composto convertido para XAML estático.
+- Diagnóstico: Leitura/Testes + Relatórios/State convertido para XAML estático.
+
+Auto-Teste:
+- O relatório completo continua sendo a fonte de verdade.
+- A UI deixa de anunciar falso erro quando o relatório fecha N/N e o wrapper Process não expõe ExitCode.

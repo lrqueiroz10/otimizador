@@ -1,0 +1,55 @@
+﻿SUPER OPTIMIZER V3.3 FINAL CANDIDATE
+=====================================
+
+TELA INICIAL REDESENHADA
+- Ações rápidas na Dashboard:
+  • Manutenção Semanal
+  • Criar ponto de restauração
+  • Atualizar status
+  • Ver uso da RAM
+  • Verificar Integridade
+  • Limpar DNS
+  • Limpar Standby RAM
+  • REPARAR Windows (vermelho / avançado)
+- Recomendações automáticas baseadas em:
+  • data da última manutenção semanal
+  • uso atual de RAM
+  • última verificação de integridade
+  • VBS/HVCI
+  • sessão de Windows Update pausada
+  • presença do EmptyStandbyList.exe
+- Atalhos do Windows:
+  • Gerenciador de Tarefas
+  • Aplicativos de Inicialização
+  • Armazenamento
+  • Windows Update
+  • Segurança do Windows
+  • Gerenciador de Dispositivos
+  • Copiar resumo do PC
+- Atividade recente com as últimas operações/logs.
+- Legenda visual de cores.
+
+MELHORIAS DE ARQUITETURA
+- Funções de RAM da interface foram centralizadas para evitar código duplicado.
+- Parar Update (sessão) agora salva quais serviços estavam rodando.
+- Reativar Update restaura o estado anterior em vez de simplesmente forçar tudo ON.
+- Novo relatório técnico local por MachineGuid.
+- Novo limpador de logs .log com mais de 30 dias.
+- Status agora inclui:
+  • porcentagem de RAM em uso
+  • nome do plano de energia
+  • disponibilidade do RAM cleaner
+  • estado de pausa temporária do Windows Update
+
+DIAGNÓSTICO
+- Gerar relatório do PC
+- Abrir Relatórios
+- Abrir Logs
+- Abrir README
+- Limpar logs antigos (30 dias)
+- Auto-Teste agora valida UI -> Engine, Dashboard final, Update seguro e relatório técnico.
+
+POLIMENTO
+- Versões sincronizadas entre interface, config e auto-teste.
+- Revisão adicional de ortografia e rótulos.
+- Ordem visual verde -> azul -> laranja -> vermelho preservada.

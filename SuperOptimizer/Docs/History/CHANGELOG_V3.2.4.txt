@@ -1,0 +1,47 @@
+﻿SUPER OPTIMIZER V3.2.4 MEMORY TOOLS
+=====================================
+
+NOVO: FERRAMENTAS MANUAIS DE RAM
+--------------------------------
+Na página Manutenção > Memória RAM:
+
+- Ver uso atual da RAM
+- Limpar Standby RAM [AVANÇADO]
+- Limpeza COMPLETA da RAM [EXPERIMENTAL]
+- Abrir pasta Tools
+
+Standby RAM:
+- usa apenas "standbylist"
+- se houver 25% ou mais de RAM livre, a interface avisa que a limpeza
+  provavelmente é desnecessária e pede confirmação para forçar
+- nunca roda automaticamente
+
+Limpeza completa:
+- workingsets
+- modifiedpagelist
+- standbylist
+- sempre exige confirmação forte
+- nunca roda automaticamente
+
+FERRAMENTA EXTERNA
+------------------
+EmptyStandbyList.exe não é distribuído no ZIP.
+O usuário deve colocar seu próprio arquivo em:
+SuperOptimizer\Tools\EmptyStandbyList.exe
+
+Antes da execução, o Super Optimizer registra SHA-256 e, quando possível,
+o status da assinatura Authenticode.
+
+SEGURANÇA
+---------
+As novas ações não foram adicionadas:
+- aos perfis
+- à Manutenção Semanal
+- a qualquer automação
+
+A V3.2.4 preserva as correções de:
+- Dashboard .Count
+- callbacks WPF
+- perfis resilientes
+- Acesso Rápido
+- manutenção reorganizada

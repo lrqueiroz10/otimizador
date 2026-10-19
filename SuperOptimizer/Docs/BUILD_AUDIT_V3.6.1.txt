@@ -1,0 +1,110 @@
+﻿SUPER OPTIMIZER V3.6.1 SMART STUDIO RC8 - STATIC AUDIT
+===========================================================
+
+OBJETIVO DESTA BUILD
+--------------------
+Corrigir problemas observados em execução real na V3.6.0 e tornar três áreas
+mais transparentes: Armazenamento, Windows Studio e Diagnóstico.
+
+CORREÇÕES BASEADAS EM LOG REAL
+------------------------------
+1. CleanupAnalyze / Windows PowerShell 5.1
+   - Removido Generic.List<object> do resultado da análise.
+   - A função usa array PowerShell simples e cast explícito para object[].
+   - Launcher passou a testar CleanupAnalyze antes de abrir a GUI.
+
+2. WinGet
+   - stdout/stderr são decodificados por UTF-8 estrito com fallback para a
+     codificação padrão do Windows.
+   - O processo faz WaitForExit + Refresh antes de ler ExitCode.
+   - O ExitCode capturado controla OK/WARN e evita o antigo "WinGet exit=" vazio.
+   - --include-unknown continua opcional e desmarcado por padrão.
+
+3. Relatórios pós-operação
+   - Show-Operation grava o resultado estruturado em LastOperationResult.
+   - Análise de armazenamento, WinGet, Diagnóstico e State podem abrir uma
+     visualização humana após o Worker terminar.
+
+WINDOWS STUDIO
+--------------
+Módulos visíveis/selecionáveis: 7
+- Energy
+- PowerThrottle
+- Visuals
+- Background
+- Telemetry
+- Indexing
+- Hibernation
+
+Fluxos:
+- Aplicar selecionados
+- Selecionar recomendados / todos / nenhum
+- Selecionar módulos da última sessão
+- Ver estado atual
+- Ver TODAS as alterações detalhadas
+- Desfazer última aplicação pelo snapshot imediatamente anterior
+- Restaurar selecionados aos backups originais conhecidos
+- Restaurar todos ao original
+
+O snapshot do Studio foi refeito com arrays simples para evitar o mesmo binder
+bug de Generic.List observado no Windows PowerShell 5.1.
+
+ARMAZENAMENTO
+-------------
+"Analisar armazenamento" está presente em:
+- Dashboard
+- Limpeza / Armazenamento
+- Manutenção
+
+A análise é somente leitura e estima áreas explicitamente permitidas pelo
+fail-safe. Não segue reparse points/junctions.
+
+DIAGNÓSTICO
+-----------
+- Resumo atual do PC na própria aba
+- Carregar Diagnóstico (somente leitura)
+- Auto-Teste
+- Erros persistentes recentes de inicialização/interface
+- Auditoria do State
+- Relatório completo
+- Logs e README
+
+AUDITORIA ESTRUTURAL OFFLINE
+----------------------------
+- PowerShell files inspecionados: 5
+- Balanceamento léxico (), {}, []: OK nos 5 arquivos
+- Funções do Engine: 164, sem duplicatas
+- Funções da UI/App: 63, sem duplicatas
+- Referências internas SO no Engine: 158
+- Referências internas não resolvidas: 0
+- Rotas do Engine: 78
+- Rotas esperadas no SelfTest: 78
+- Divergência de rotas: 0
+- Ações literais da UI: 59
+- Ações da UI sem rota: 0
+- Config.json: OK
+- MainWindow.xaml XML: OK
+- Referências FindName -> XAML: OK
+- GetNewClosure: 0
+- Integrity.json: 7/7 hashes conferidos
+- Arquivos temporários de auditoria no pacote: 0
+
+PROTEÇÕES PRESERVADAS
+---------------------
+O Engine não contém rotinas de limpeza/otimização para:
+- Microsoft\Windows\Recent / Acesso Rápido
+- Prefetch
+- Event Logs via wevtutil cl
+- DisableAntiSpyware
+- DISM /ResetBase
+- useplatformclock
+- disabledynamictick
+
+VALIDAÇÃO NATIVA AINDA NECESSÁRIA
+---------------------------------
+Este ambiente de build não possui Windows PowerShell/WPF, Registro do Windows,
+serviços, DISM, WinGet ou CIM do Windows. Portanto, a validação final nativa
+ocorre no PC do usuário. O Launcher executa o parser oficial do PowerShell,
+valida XAML/JSON/Integrity e agora faz smoke-test de Status, CleanupAnalyze,
+DiagnosticQuick, WindowsStudioStatus e outras rotas antes de abrir a interface.
+O Auto-Teste aprofunda a validação em DRY-RUN e Worker/IPC separado.

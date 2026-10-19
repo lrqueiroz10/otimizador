@@ -1,0 +1,16 @@
+﻿SUPER OPTIMIZER — CHECKLIST FINAL NO WINDOWS REAL
+
+1) Preserve a pasta State da versão que você vinha usando.
+2) Abra V3.7.3 FINAL CANDIDATE RC13.
+3) Confira visualmente: Dashboard, Limpeza, DNS/Rede, Otimizar Windows, Perfis, Diagnóstico.
+4) Rode AUTO-TESTE até RESULTADO. Com as três novas travas de regressão de UI/Optimization Lab, o alvo esperado desta build é 129/129.
+5) No Optimization Lab, marque SOMENTE Game Mode + Efeitos Visuais.
+6) Veja PRÉVIA DOS SELECIONADOS.
+7) Aplique com ponto de restauração marcado.
+8) Use Ver estado atual e confirme os dois módulos.
+9) Clique DESFAZER ÚLTIMA APLICAÇÃO.
+10) Verifique novamente o estado.
+11) Rode Auditoria de State.
+12) Reinicie o Windows.
+13) Abra o programa, rode Diagnóstico Rápido + Auto-Teste + Auditoria de State.
+14) Se tudo permanecer íntegro, a build está pronta para ser promovida a FINAL sem adicionar novas funções.

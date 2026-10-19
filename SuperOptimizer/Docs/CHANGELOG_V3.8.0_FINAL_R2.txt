@@ -1,0 +1,9 @@
+﻿SUPER OPTIMIZER V3.8.0 FINAL R2 — OBSERVABILITY / LOG POLISH
+
+- Corrige rótulo duplicado "R1 R1" da revisão anterior.
+- DISM/SFC: progresso granular continua na UI, mas o log registra apenas marcos de 10% e suprime as barras ASCII repetidas.
+- Worker: atualização final da barra de progresso não gera uma segunda linha de conclusão no log.
+- Manutenção Semanal: mantém resumo removidos/ignorados e mede espaço liberado em unidade útil.
+- Limpeza Completa: resume TEMP/Windows Temp/Shader, estado de Lixeira/DNS e usa bytes/KB/MB/GB em vez de arredondar tudo para 0 GB.
+- Component Store, Lixeira e RAM: mensagens de conclusão não aparecem duplicadas.
+- Nenhum tweak, perfil, serviço-alvo, política ou mecanismo de rollback foi ampliado nesta revisão.

@@ -1,0 +1,7 @@
+# O manifesto SHA-256 depende dos bytes exatos em Windows e Linux.
+*.ps1 -text
+*.psm1 -text
+*.json -text
+*.xaml -text
+*.bat -text
+*.zip binary

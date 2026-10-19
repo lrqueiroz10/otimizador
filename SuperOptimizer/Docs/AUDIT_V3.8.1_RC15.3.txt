@@ -1,0 +1,34 @@
+AUDITORIA V3.8.1 RC15.3 — VERIFICAÇÃO DO PERFIL GAMER + NAVEGADOR
+
+EVIDÊNCIA DO TESTE REAL RECEBIDO
+- ProfileGamerBrowser executou até 100%.
+- Ponto de restauração criado.
+- Núcleo gaming, tarefas, serviços, energia, Defender, Spooler e VBS/HVCI/Hypervisor foram aplicados/verificados.
+- Único aviso operacional anterior à verificação: AllowNewsAndInterests, política opcional já tratada como não fatal.
+- O estado genérico foi reconhecido como EXTREMO, provando que o núcleo Agressivo + VBS OFF estava presente; a falha ficou restrita ao classificador específico Gamer + Navegador.
+
+CORREÇÃO
+- Criado Get-SOGamerBrowserVerification, com resultado estruturado: Match, Reasons, ServiceRatio, ServicesSeen e ServicesMatched.
+- A rota ProfileGamerBrowser verifica usando $opts da própria execução antes de recorrer ao classificador genérico.
+- Test-SOGamerBrowserMatch continua disponível para detecção persistente a partir do State.
+- Divergências deixam de virar apenas "estado detectado=EXTREMO"; o log passa a dizer exatamente o requisito divergente.
+- Persistência do marcador agora é checada e gera WARN se falhar.
+
+ESCOPO PRESERVADO
+- App/controles e seleção personalizada: sem alteração funcional.
+- Worker/IPC: sem alteração funcional.
+- Perfis Universal/Agressivo/Extremo: sem alteração funcional.
+- Rollback/State, impressão, virtualização, Defender, Update e lista de serviços: sem expansão de escopo.
+
+AUDITORIA ESTÁTICA PÓS-CORREÇÃO
+- 25/25 verificações internas aprovadas.
+- Engine: 201 funções, sem nomes duplicados.
+- App: 78 funções, sem nomes duplicados.
+- Invoke-SOAction: 89 rotas únicas.
+- Config: 37 serviços; Spooler continua fora do catálogo geral.
+- Integrity.json: 7/7 hashes conferidos.
+- MainWindow.xaml válido.
+- 12/12 fragmentos XAML embutidos extraídos e validados como XML.
+- App.ps1 byte-idêntico à RC15.2.
+- Worker.ps1 byte-idêntico à RC15.2.
+- Tweaks proibidos continuam ausentes: /ResetBase, DisableAntiSpyware, useplatformclock, disabledynamictick.

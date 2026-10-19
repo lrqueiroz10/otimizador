@@ -1,0 +1,25 @@
+﻿SUPER OPTIMIZER V3.3.1 - AUTO-TEST AUDIT
+========================================
+
+Causa encontrada
+----------------
+A V3.3 adicionou PerGameRemove ao dry-run genérico. Essa ação não é uma rota
+"stateless": ela exige um backup real criado anteriormente para o executável.
+Usar TestGame.exe sem backup fazia o Auto-Teste falhar por design.
+
+Correções
+---------
+- PerGameRemove removido do grupo genérico de rotas que precisam concluir.
+- Criado teste contextual próprio para a proteção contra restauração sem backup.
+- Relatório do Auto-Teste agora é escrito progressivamente após cada teste.
+- stdout/stderr do processo são capturados em State\Runtime.
+- Se o processo falhar antes de gerar relatório, a GUI mostra a saída real.
+- Timeout de 180 segundos impede janela eternamente parada.
+- ExitCode é mostrado quando o processo falha.
+
+Auditoria
+---------
+UI -> Engine: OK (46 ações UI / 53 rotas Engine)
+Config.json: OK
+XAML XML: OK
+Nenhum perfil/tweak foi alterado nesta correção.

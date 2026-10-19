@@ -1,0 +1,9 @@
+﻿SUPER OPTIMIZER V3.8.1 FINAL CANDIDATE RC15
+
+- Novo perfil GAMER + NAVEGADOR, focado em PC pessoal para jogos + navegador.
+- Recursos personalizáveis: Windows Search, OneDrive, RDP, VPN, Hotspot/ICS, biometria, descoberta de rede/UPnP, hibernação e virtualização.
+- Impressora/Spooler é sempre preservada; também não desativa Store/Xbox, Bluetooth, câmera/mic, Phone Link, Windows Update ou Defender.
+- O perfil restaura primeiro as camadas anteriores e então aplica a combinação escolhida, mantendo rollback original por MachineGuid.
+- Desmarcar virtualização desativa VBS/HVCI/Hypervisor do Windows e recomenda reinício; AMD-V/SVM da BIOS não é alterado.
+- O Perfil Agressivo fixo teve sua descrição corrigida: ele reduz OneDrive por política; use Gamer + Navegador para preservá-lo.
+- Novo marcador de perfil personalizado permite ao Dashboard identificar GAMER + NAVEGADOR quando o estado continua compatível.

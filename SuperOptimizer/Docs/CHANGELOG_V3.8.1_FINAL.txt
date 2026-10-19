@@ -1,0 +1,19 @@
+SUPER OPTIMIZER V3.8.1 FINAL
+
+PROMOÇÃO DA RC15.3 VALIDADA
+- Promove para FINAL a lógica da RC15.3 sem alterar App.ps1, Engine.psm1 ou Worker.ps1.
+- Novo perfil GAMER + NAVEGADOR personalizável validado no Windows PowerShell 5.1 real.
+- Impressora / Print Spooler pode ser preservada ou desativada explicitamente apenas nesse perfil.
+- Virtualização pode ser preservada ou reduzida explicitamente; AMD-V/SVM da BIOS não é alterado.
+- Windows Search, OneDrive, RDP, VPN, Hotspot, biometria, descoberta de rede e hibernação também são opções de preservação.
+- O perfil restaura as camadas anteriores antes de aplicar uma nova combinação.
+- Verificação pós-aplicação usa as opções da própria execução e registra divergências específicas.
+
+VALIDAÇÃO REAL
+- Cenário A: Impressora e Virtualização não preservadas -> Spooler Disabled, VBS/HVCI/Hypervisor reduzidos, estado final GAMER + NAVEGADOR verificado.
+- Cenário B: Impressora e Virtualização preservadas -> Spooler e virtualização restaurados ao estado original salvo e preservados, estado final GAMER + NAVEGADOR verificado.
+
+ESCOPO CONGELADO
+- Nenhum tweak novo foi adicionado na promoção para FINAL.
+- Perfis Universal/Agressivo/Extremo permanecem funcionalmente inalterados.
+- App.ps1, Engine.psm1 e Worker.ps1 são byte-idênticos à RC15.3 validada.

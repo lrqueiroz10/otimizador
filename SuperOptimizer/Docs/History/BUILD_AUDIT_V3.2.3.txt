@@ -1,0 +1,34 @@
+﻿SUPER OPTIMIZER V3.2.3 - RESILIENCE AUDIT
+===========================================
+
+Config.json: OK
+XAML XML: OK
+UI -> Engine: OK
+Rotas Engine: 49
+Ações UI: 45
+
+Correções preservadas:
+- Dashboard .Count: OK
+- WPF sem GetNewClosure: OK
+- Manutenção reorganizada: OK
+- State em Rollback: OK
+
+Resiliência:
+- Set-SORegistryValue -Optional: OK
+- Dsh / AllowNewsAndInterests opcional: OK
+- Políticas Background best-effort: OK
+- Telemetria de Registro best-effort: OK
+- Hibernação não aborta perfil: OK
+- Worker retorna avisos: OK
+- VBS/HVCI continua crítico no Extremo: OK
+
+Segurança:
+- Recent/Acesso Rápido protegido
+- Prefetch protegido
+- Event Logs não são limpos
+- EmptyStandbyList não usado
+- HPET/useplatformclock/disabledynamictick não usados
+
+IMPORTANTE:
+Para manter rollback correto entre versões, copie/preserve a pasta
+SuperOptimizer\State da instalação que já aplicou ajustes.

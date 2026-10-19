@@ -1,0 +1,13 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.3 — UI LAYOUT PASS
+
+- Dashboard: KPIs reorganizados em 2x2 para não ficarem espremidos na largura mínima.
+- Smart Care: card compacto; lista longa usa scroll vertical em vez de criar espaço morto excessivo.
+- Ações principais: grade 3x3 com largura uniforme.
+- WinGet: grade 2 colunas e CheckBox de --include-unknown com conteúdo WPF explícito.
+- Atalhos do Windows: grade de 3 colunas.
+- Central de Limpeza: armazenamento 2 colunas; plano, limpezas individuais e RAM em grades de 3 colunas.
+- DNS / Rede: DNS Jumper em 3 colunas e ferramentas nativas/recuperação em 2x2.
+- Perfis: CheckBox de ponto de restauração migrado para conteúdo WPF explícito.
+- Botões em grid aceitam largura menor (MinWidth 180) para manter alinhamento na largura mínima da janela.
+- Engine/Worker/rotas/tweaks/rollback: sem alterações funcionais.
+- Auto-Teste: mantém 126 testes e reforça a validação de layout do Dashboard/Smart Care.

@@ -1,0 +1,14 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.6 — KNOWN-GOOD BUTTON FALLBACK
+
+Problema confirmado no Windows real:
+- cards de WinGet, Atalhos do Windows, DNS nativo e rollback ficavam vazios;
+- tentativas com UniformGrid, Grid explícito e botão com Border interno não resolveram;
+- o mesmo app continuava renderizando corretamente Presets e Aplicar/inspecionar.
+
+Correção:
+- os quatro grupos problemáticos passaram a usar exatamente a combinação já comprovada:
+  New-ActionCard + WrapPanel + New-Button/New-ActionButton;
+- larguras fixas e WrapPanel organizam os botões sem Grid/UniformGrid;
+- nenhuma alteração no Engine.psm1, Worker.ps1, rotas, ações ou rollback.
+
+Escopo desta build: SOMENTE renderização/organização dos botões afetados.

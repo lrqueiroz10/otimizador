@@ -1,0 +1,36 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.2 — STATIC AUDIT
+
+[OK] Config version :: 3.7.3 FINAL CANDIDATE RC13.2
+[OK] XAML version
+[OK] Launcher version
+[OK] SelfTest version
+[OK] BAT version
+[OK] Removed $repair=New-GridActionCard
+[OK] Removed $update=New-GridActionCard
+[OK] Removed $perGame = New-Card
+[OK] Removed $note=New-Card
+[OK] Removed $stateCard=New-Card
+[OK] Removed $errors=New-Card
+[OK] Removed $reports=New-GridActionCard
+[OK] Present $maintenance=New-GridActionCard
+[OK] Present $reportsGrid=New-Object System.Windows.Controls.Primitives.UniformGrid
+[OK] Present $serviceStack=New-Object System.Windows.Controls.StackPanel
+[OK] Present -Text 'Backups e estado salvo'
+[OK] Present -Text 'Prioridade por jogo'
+[OK] No duplicate App functions :: 65 funcs
+[OK] Studio catalog 32 :: 32
+[OK] Studio UI 32
+[OK] Studio apply 32
+[OK] Studio restore 32
+[OK] Safety useplatformclock
+[OK] Safety disabledynamictick
+[OK] Safety DisableAntiSpyware
+[OK] Safety /ResetBase
+[OK] Safety wevtutil.exe cl
+[OK] Engine unchanged
+[OK] Worker unchanged
+[OK] Static XAML fragments parse :: 5 fragments
+[OK] SelfTest empty-card regression exists
+[OK] UI action routes resolve
+[OK] Integrity 7 entries
+[OK] Integrity hashes

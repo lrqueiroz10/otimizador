@@ -1,0 +1,34 @@
+﻿{
+  "version": "3.9.0 DEV",
+  "algorithm": "SHA256",
+  "files": [
+    {
+      "path": "Launcher.ps1",
+      "sha256": "a87b2e756a7f446ae250560cfeac0e974d11eb145f97d1d0e04951edc8b59d60"
+    },
+    {
+      "path": "App.ps1",
+      "sha256": "3bfbe6e2bac659694a6634daad146559dead51ec4df2b6594c7c793a388ec202"
+    },
+    {
+      "path": "Config.json",
+      "sha256": "fc6bca8e164218eaf220486a0df461136d7c488f144867399ea100c8758ad964"
+    },
+    {
+      "path": "UI\\MainWindow.xaml",
+      "sha256": "7d9650e0b7c288346d84da2f1123584d050f653dddaba789d3355d4feec1c8e7"
+    },
+    {
+      "path": "Core\\Engine.psm1",
+      "sha256": "34d8b83c3ad659831c6c89b3bf931e70baa6acb4213de1c7b35f0e3c1447e01a"
+    },
+    {
+      "path": "Core\\Worker.ps1",
+      "sha256": "dc940c54a534e67dffd9bcba11558f2218278cc11412e5c89f6354c72ac948a1"
+    },
+    {
+      "path": "Core\\SelfTest.ps1",
+      "sha256": "841ef62808d48cd893fcf5ae043c53bc5ab72392226585550a664e35fc1c1d04"
+    }
+  ]
+}

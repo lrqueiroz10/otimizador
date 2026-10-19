@@ -1,0 +1,18 @@
+﻿SUPER OPTIMIZER V3.2.5 BUTTON ORDER
+===================================
+
+REVISÃO VISUAL
+- padronizada a leitura visual dos botões na ordem:
+  VERDE -> AZUL -> LARANJA -> VERMELHO
+
+AJUSTES PRINCIPAIS
+- GPU / Rede / Update reorganizado nessa ordem visual
+- Reativar Update virou o primeiro botão do grupo
+- Parar Update (sessão) passou para vermelho
+- Limpar WinSxS agora vem antes de REPARAR Windows
+- Abrir Armazenamento / Abrir Windows Update vêm antes de Cache Windows Update
+- Memória RAM reorganizada: ver uso / abrir Tools / standby / limpeza completa
+- Serviços: Restaurar serviços vem antes de Aplicar perfil de serviços
+- Virtualização: Restaurar VBS vem antes de VBS OFF
+- Rollback: restaurações específicas primeiro, RESTAURAR TUDO por último
+- alguns botões auxiliares foram padronizados em azul para consistência visual

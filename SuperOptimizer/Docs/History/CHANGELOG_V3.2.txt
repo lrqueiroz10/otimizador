@@ -1,0 +1,31 @@
+﻿SUPER OPTIMIZER V3.2.2 POLISHED
+====================================
+
+CORRECOES PRINCIPAIS
+- Corrigido Status: .Count em resultados escalares causava falha em Get-SOProfileMatch.
+- Corrigido erro pos-operacao: closures do modal tentavam chamar Start-StatusRefresh fora do escopo.
+- Refresh de status agora usa fila/flag monitorada pelo timer principal.
+- Show-UiError agora usa quebras de linha reais.
+- Launcher testa a rota Status antes de abrir a GUI.
+- Launcher executa um Worker de Status real em processo separado antes de abrir.
+
+GAMING
+- Gaming agora possui abas: Ajustes Gaming e Jogos priorizados.
+- Lista prioridades CpuPriorityClass detectadas no IFEO.
+- Marca configurações com backup como SUPER OPTIMIZER e externas como DETECTADO.
+- Permite restaurar somente o jogo selecionado quando existe backup.
+
+MANUTENCAO
+- TEMP do Usuário individual.
+- Windows Temp individual.
+- Limpar DNS individual.
+- Shader DirectX opcional e separado.
+- CHKDSK /scan.
+- DISM AnalyzeComponentStore.
+- DISM StartComponentCleanup (sem /ResetBase).
+- Cache Windows Update, Integridade, Reparo e Lixeira continuam separados.
+- Atalhos para Armazenamento e Windows Update.
+
+SEGURANCA
+- Continua proibido limpar Recent/Acesso Rápido, Prefetch e Event Logs.
+- Não inclui limpeza automatica de standby RAM, HPET ou tweaks globais de TCP.

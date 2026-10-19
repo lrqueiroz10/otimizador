@@ -1,0 +1,30 @@
+﻿SUPER OPTIMIZER V3.2.1 - BUILD AUDIT
+=====================================
+
+Arquivos PowerShell auditados: 5
+Rotas do Engine: 49
+Ações referenciadas diretamente pela UI: 45
+
+Config.json: OK
+XAML XML: OK
+GetNewClosure na interface: 0
+Sintaxe $variavel: inválida detectada: 0
+UI -> Engine: OK
+Dashboard .Count: CORRIGIDO
+Guard anti-closure Launcher: OK
+Guard anti-closure Auto-Teste: OK
+Aba Jogos priorizados: OK
+Restauração individual de jogo: OK
+Manutenção expandida: OK
+Bloqueios de limpeza perigosa: OK
+
+Preflight nativo do Windows mantido:
+- parser oficial do PowerShell (.ps1 e .psm1)
+- validação de Config.json
+- carregamento real do XAML/WPF
+- smoke-test do Engine em dry-run
+- Worker real de Status com timeout antes da GUI
+
+LIMITAÇÃO DO BUILD:
+Este ambiente não executa WPF, Registro, serviços ou DISM do Windows.
+Os testes nativos acima também são executados no Windows pelo Launcher e Auto-Teste.

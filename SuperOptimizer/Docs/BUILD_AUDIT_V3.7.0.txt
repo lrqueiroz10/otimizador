@@ -1,0 +1,24 @@
+﻿SUPER OPTIMIZER V3.7.0 OPTIMIZATION LAB RC10 - STATIC BUILD AUDIT
+======================================================================
+
+Engine functions: 171
+Engine routes: 118
+UI literal actions: 62
+UI routes missing: 0
+Internal SO refs missing: 0
+Optimization Lab visible modules: 32
+GetNewClosure: 0
+Heavy hidden Worker preflight at startup: removed
+Startup splash: present
+DNSStatus PS5.1 array fix: present
+Integrity manifest: 7/7 hashes regenerated
+
+Safety kept:
+- Recent/Acesso Rápido untouched
+- Prefetch untouched
+- Event Logs untouched
+- no /ResetBase
+- no HPET/useplatformclock/disabledynamictick
+- Defender is not disabled
+
+NOTE: Native WPF/Registry/services/PowerShell 5.1 behavior must be validated by the in-app AUTO-TESTE on Windows.

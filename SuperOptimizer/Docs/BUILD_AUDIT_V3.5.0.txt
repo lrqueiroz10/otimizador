@@ -1,0 +1,38 @@
+﻿SUPER OPTIMIZER V3.5.0 WINDOWS STUDIO + DNS LAB RC6 - OFFLINE AUDIT
+
+Base: V3.4.4 FULL CLEAN RC4 (91/91 Auto-Test aprovado no Windows do usuário)
+Rotas Engine: 68
+Ações UI: 60
+Funções Engine: 145
+Referências internas SO: 138
+Referências internas sem definição: 0
+UI -> Engine sem rota: 0
+GetNewClosure: 0
+Config JSON: OK
+XAML XML: OK
+Integrity SHA-256: 7/7
+
+Windows Studio:
+- snapshot de sessão: OK
+- aplicar tudo: OK estrutural
+- desfazer sessão: OK estrutural
+- restore original: OK estrutural
+- VBS/Prefetch/debloat/DNS fora do modo Tudo: OK
+
+DNS Lab:
+- benchmark UDP nativo: OK estrutural
+- backup DNS original: OK estrutural
+- aplicação por provedor: OK estrutural
+- restauração DHCP/static: OK estrutural
+- ipconfig release/renew ausente: OK
+
+Limitação: este ambiente não executa WPF, Registro, powercfg, serviços, Set-DnsClientServerAddress ou APIs Windows reais. O Auto-Test no Windows continua sendo a validação nativa final.
+
+FIXES PRÉ-ENTREGA:
+- Dry-run de WindowsStudioUndo não exige snapshot real: OK
+- Dry-run de DNSRestore não exige backup real: OK
+- Manifesto Integrity.json no schema esperado pelo Launcher (array path/sha256): OK
+- Cmdlets DNS/Rede adicionados ao Auto-Test: OK
+- Endpoint UDP usa construtor .NET explícito: OK
+- Session undo restaura também o estado do powerplan e remove plano criado só pela sessão: OK
+- DNS restore preserva backup quando adaptador original está ausente: OK

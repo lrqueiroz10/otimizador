@@ -1,0 +1,43 @@
+﻿SUPER OPTIMIZER V3.2.3 RESILIENT
+==================================
+
+CORREÇÃO PRINCIPAL
+------------------
+O Perfil Extremo podia ser interrompido por uma única política opcional do
+Registro. Exemplo observado:
+HKLM\SOFTWARE\Policies\Microsoft\Dsh
+AllowNewsAndInterests
+-> "Tentativa de execução de uma operação não autorizada."
+
+Esse ajuste de background não é essencial para definir o Perfil Agressivo ou
+Extremo. A partir desta versão, políticas de background/privacidade que variam
+entre builds e permissões do Windows são tratadas como BEST-EFFORT:
+
+- Se aplicarem: log [OK]
+- Se o Windows recusar: log [WARN]
+- O perfil continua para telemetria, energia, serviços, Defender e, no Extremo,
+  VBS/HVCI/hypervisor.
+
+CONTINUA FATAL QUANDO DEVE SER
+------------------------------
+Ajustes centrais do perfil continuam interrompendo em caso de falha real,
+principalmente o núcleo Gaming e a etapa VBS/Hypervisor do Perfil Extremo.
+Assim o programa não afirma "Extremo aplicado" se a parte que realmente define
+o Extremo não puder ser concluída.
+
+MELHORIAS
+---------
+- Set-SORegistryValue ganhou modo -Optional.
+- Background/privacidade utiliza -Optional.
+- AllowTelemetry utiliza -Optional.
+- Efeitos visuais são best-effort.
+- Falha em powercfg /hibernate off vira aviso e não aborta o perfil.
+- Worker informa quantidade e mensagens de avisos em operações bem-sucedidas.
+- Auto-Teste ganhou verificações de "Perfis resilientes" e "Avisos de perfil".
+
+IMPORTANTE SOBRE STATE
+----------------------
+Se uma versão anterior já aplicou parcialmente um perfil, preserve a pasta
+SuperOptimizer\State ao atualizar. Ela contém os backups originais usados
+pelo Rollback. Não comece com State vazio se pretende manter o rollback para
+o estado anterior à primeira otimização.

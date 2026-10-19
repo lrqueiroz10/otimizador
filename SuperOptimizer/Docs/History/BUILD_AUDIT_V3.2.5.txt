@@ -1,0 +1,14 @@
+﻿SUPER OPTIMIZER V3.2.5 BUTTON ORDER - BUILD AUDIT
+===================================================
+
+Auditoria estática concluída.
+
+- App.ps1 atualizado: OK
+- Config.json versão atualizada: OK
+- Launcher.ps1 versão atualizada: OK
+- MainWindow.xaml versão atualizada: OK
+- Ordem visual revisada para priorizar:
+  Verde -> Azul -> Laranja -> Vermelho
+- Sem alteração no Engine ou no Worker.
+- Sem alteração de rotas.
+- Revisão focada em layout, cor e ordem visual de botões.

@@ -1,0 +1,8 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.8 — SERVICE ROLLBACK HOTFIX
+
+- Corrige restauração de serviços protegidos como TrkWks.
+- Restore-SOServices deixa de escrever Start/DelayedAutoStart diretamente no Registry e passa a usar o Service Control Manager (sc.exe config).
+- Restauração de serviço do snapshot do Windows Studio usa o mesmo caminho.
+- Mantém read-back do StartupType após a restauração.
+- Novo Auto-Teste: Restore de serviços via SCM.
+- Demais módulos/rotas preservados.

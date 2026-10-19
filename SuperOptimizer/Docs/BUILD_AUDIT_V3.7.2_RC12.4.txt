@@ -1,0 +1,8 @@
+﻿SUPER OPTIMIZER V3.7.2 UI AUDIT RC12.4 — BUILD AUDIT
+
+- Base: RC12.3, que deriva da RC12.2 validada com 126/126 no Windows PowerShell 5.1 real.
+- Escopo: UI somente; correção de renderização de botões dinâmicos.
+- Engine.psm1 e Worker.ps1 permanecem byte a byte iguais à RC12.3.
+- Config/XAML/Launcher/BAT/SelfTest sincronizados em 3.7.2 UI AUDIT RC12.4.
+- Integrity.json regenerado após todas as alterações.
+- O teste existente "Paleta de botões" agora valida fundo contrastante, borda 1.5 e conteúdo WPF explícito.

@@ -1,0 +1,28 @@
+﻿SUPER OPTIMIZER V3.8.0 FINAL CANDIDATE RC14.2 — AUDITORIA FINAL
+
+ANTES (RC13.9)
+- Núcleo de otimização/rollback funcional e profundamente testado.
+- Logs de manutenção semanal excessivamente verbosos.
+- Sem histórico de ações estruturado, comparador persistente, perfis personalizados, export/import do Lab, State Manager consolidado ou relatório pós-reboot.
+
+DEPOIS (RC14)
+1. Comparador Antes x Depois para operações monitoradas.
+2. Timeline persistente por MachineGuid com caminho do log e mudanças.
+3. Export/Import JSON da seleção do Optimization Lab.
+4. Perfis personalizados salvos no State.
+5. Health Summary objetivo sem pontuação artificial.
+6. Estados ATIVO/PADRÃO/DIFERENTE/NÃO SUPORTADO por módulo.
+7. Comparação de perfil atual versus alvo.
+8. State Manager com primeiro backup, tamanho, integridade e categorias.
+9. Portabilidade explicitada: State acompanha o app, backups isolados por MachineGuid.
+10. Exportação de diagnóstico TXT/JSON.
+11. Marcador e confirmação pós-reboot.
+12. Atualizador próprio adiado deliberadamente.
+13. Manutenção Semanal com resumo em vez de dezenas de arquivos bloqueados no log.
+
+REGRAS PRESERVADAS
+- Rollback antes de mutação.
+- Nada de Recent/Prefetch/Event Logs como lixo.
+- Nada de HPET/useplatformclock/disabledynamictick.
+- Defender permanece ativo.
+- Xbox/Store/Bluetooth/câmera/mic/VirtualBox preservados conforme arquitetura existente.

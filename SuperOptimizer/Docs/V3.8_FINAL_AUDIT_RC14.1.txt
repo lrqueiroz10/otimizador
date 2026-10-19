@@ -1,0 +1,12 @@
+﻿SUPER OPTIMIZER V3.8.0 FINAL CANDIDATE RC14.2 — AUDITORIA CIRÚRGICA
+
+ANTES:
+- RC14 real executou 151/153 por dois falsos negativos estruturais no SelfTest.
+- O comportamento cumulativo dos presets já existia.
+- O writer de progresso já fazia retries, mas o teste procurava comentário antigo e não provava o fail-safe completo.
+
+DEPOIS:
+- Write-SOProgress possui proteção externa explícita e nenhum throw em falha de telemetria.
+- Add-StudioPresetSelectionUi apenas marca correspondências e preserva seleções anteriores.
+- SelfTest extrai cada função por fronteira de função e valida o contrato dentro do corpo, evitando falsos negativos por chaves aninhadas ou expansão de $true.
+- Engine/App/Worker continuam com contratos de rotas e rollback intactos.

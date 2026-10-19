@@ -1,0 +1,7 @@
+﻿SUPER OPTIMIZER V3.7.3 FINAL CANDIDATE RC13.1 — STATIC XAML UI HOTFIX
+
+- Corrige os cards ainda vazios vistos no Windows PowerShell 5.1 real.
+- Aplicar/inspecionar e Desfazer/restaurar do Optimization Lab agora são fragmentos XAML estáticos com controles nomeados.
+- WinGet, Atalhos do Windows e Ferramentas nativas de DNS também usam fragmentos XAML estáticos.
+- Evita depender da criação dinâmica de TextBlock/Button justamente nos blocos que apresentaram regressão visual.
+- Engine.psm1 e Worker.ps1 permanecem inalterados.

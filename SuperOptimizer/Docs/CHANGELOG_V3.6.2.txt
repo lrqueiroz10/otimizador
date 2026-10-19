@@ -1,0 +1,36 @@
+﻿SUPER OPTIMIZER V3.6.2 FINALIZATION RC9
+========================================
+
+FOCO DESTA BUILD
+- estabilidade e previsibilidade, não aumento cego de tweaks
+- startup mais rápido
+- Auto-Teste mais próximo do uso real
+- Windows Studio com undo realmente escopado
+- análise de armazenamento que não fica presa indefinidamente
+- WinGet mais robusto no Windows PowerShell 5.1
+
+WINDOWS STUDIO
+- snapshot V3 captura somente os módulos selecionados
+- DESFAZER não restaura Background/Telemetria se a sessão mexeu apenas em Energia
+- Registry de sessão remove chave criada pelo tweak quando ela não existia e fica vazia
+- serviços de sessão capturam Start e DelayedAutoStart
+- nova PRÉVIA DOS SELECIONADOS
+
+ARMAZENAMENTO
+- análise limitada por tempo e quantidade de itens por área
+- áreas que atingem o limite aparecem como PARCIAL
+- Auto-Teste pode rodar análise real sem gravar carimbo de manutenção
+
+WINGET
+- fallback de localização pelo App Installer e WindowsApps
+- leitura inteligente UTF-8/UTF-16/ANSI
+- remoção de sequências ANSI/NUL
+- histórico só é marcado como concluído quando ExitCode=0
+
+STARTUP / AUTO-TESTE
+- preflight oculto não percorre mais pastas de armazenamento nem simula perfis completos
+- Auto-Teste ganhou probes reais somente leitura: Status, CleanupAnalyze, DiagnosticQuick, WindowsStudioStatus, DNSStatus e RamInfo
+
+COMPATIBILIDADE
+- snapshots antigos Windows Studio V2 continuam aceitos pelo undo
+- State existente continua sendo o local de rollback; preserve sua pasta State ao migrar

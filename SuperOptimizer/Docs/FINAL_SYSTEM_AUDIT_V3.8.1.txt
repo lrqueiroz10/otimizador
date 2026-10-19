@@ -1,0 +1,83 @@
+﻿SUPER OPTIMIZER V3.8.1 FINAL — AUDITORIA DE RELEASE
+
+Data da auditoria: 2026-10-05T02:59:43
+
+ESCOPO
+- Promoção da RC15.3 funcionalmente validada para V3.8.1 FINAL.
+- Nenhuma alteração funcional em App.ps1, Engine.psm1 ou Worker.ps1.
+- Alterações da promoção: identificação de versão, documentação e Integrity.json regenerado.
+
+EVIDÊNCIA FUNCIONAL EM WINDOWS REAL
+- Cenário 1: Gamer + Navegador com Impressora e Virtualização não preservadas terminou com estado GAMER + NAVEGADOR verificado.
+- Cenário 2: reaplicação com Impressora e Virtualização preservadas restaurou Spooler/VBS/HVCI/Hypervisor ao estado original salvo e terminou com estado GAMER + NAVEGADOR verificado.
+- Ponto de restauração automático foi criado nos testes.
+- AllowNewsAndInterests pode gerar WARN opcional quando a política é recusada pelo Windows; o perfil continua por design.
+
+AUDITORIA ESTÁTICA
+[OK] Config.json válido
+[OK] Versão Config = 3.8.1 FINAL :: 3.8.1 FINAL
+[OK] Catálogo contém 37 serviços :: 37
+[OK] Serviços sem duplicação
+[OK] Modos de serviço válidos
+[OK] Riscos de serviço válidos
+[OK] Spooler fora do catálogo geral
+[OK] Bloqueios de limpeza completos :: Event Logs, Microsoft\Windows\Recent, Prefetch, dllcache
+[OK] Versão operacional FINAL — BAT
+[OK] Versão operacional FINAL — XAML
+[OK] Versão operacional FINAL — Launcher
+[OK] Versão operacional FINAL — SelfTest
+[OK] Versão operacional FINAL — Config
+[OK] MainWindow.xaml XML válido
+[OK] Fragmentos XAML embutidos válidos :: 17/17
+[OK] Sem funções duplicadas — App.ps1 :: 78 funções
+[OK] Sem funções duplicadas — Core/Engine.psm1 :: 201 funções
+[OK] Sem funções duplicadas — Core/Worker.ps1 :: 0 funções
+[OK] Sem funções duplicadas — Core/SelfTest.ps1 :: 3 funções
+[OK] Sem funções duplicadas — Launcher.ps1 :: 6 funções
+[OK] Invoke-SOAction contém 89 rotas únicas :: 89 total / 89 únicas
+[OK] Ações literais da UI têm rota :: 67 ações
+[OK] SelfTest cobre ProfileGamerBrowser
+[OK] Referências internas SO resolvidas :: 184 referências
+[OK] Rota ProfileGamerBrowser presente
+[OK] Base limpa antes da aplicação
+[OK] Opção Impressora chega ao Engine
+[OK] Spooler só é desativado condicionalmente
+[OK] Opção Virtualização chega ao Engine
+[OK] VBS/Hypervisor só reduzidos condicionalmente
+[OK] OneDrive é preservável
+[OK] Search é preservável
+[OK] RDP é preservável
+[OK] VPN é preservável
+[OK] Hotspot é preservável
+[OK] Biometria é preservável
+[OK] Descoberta de rede é preservável
+[OK] Hibernação é preservável
+[OK] Marcador persiste opções
+[OK] Verificação pós-aplicação usa opções correntes
+[OK] Callback WPF usa contexto Tag estável
+[OK] Tweak proibido ausente do Engine — /ResetBase
+[OK] Tweak proibido ausente do Engine — DisableAntiSpyware
+[OK] Tweak proibido ausente do Engine — useplatformclock
+[OK] Tweak proibido ausente do Engine — disabledynamictick
+[OK] Tema Claro/Escuro não é forçado
+[OK] Recent não é limpo
+[OK] Prefetch não é limpo
+[OK] Event Logs não são limpos
+[OK] Integrity.json válido
+[OK] Integrity versão FINAL :: 3.8.1 FINAL
+[OK] Integrity SHA-256 confere 7/7 :: 7/7
+[OK] Lógica byte-idêntica à RC15.3 — App.ps1 :: c238bc0089c52329e449a03e44527e4342e2088d296b10e5899c36ffb6ba4fbe
+[OK] Lógica byte-idêntica à RC15.3 — Core/Engine.psm1 :: 34d8b83c3ad659831c6c89b3bf931e70baa6acb4213de1c7b35f0e3c1447e01a
+[OK] Lógica byte-idêntica à RC15.3 — Core/Worker.ps1 :: dc940c54a534e67dffd9bcba11558f2218278cc11412e5c89f6354c72ac948a1
+[OK] README da FINAL atualizado
+[OK] Changelog FINAL presente
+[OK] Release Notes FINAL presentes
+
+RESULTADO ESTÁTICO: 58/58 verificações aprovadas
+
+LIMITAÇÃO HONESTA
+- O ambiente desta auditoria não possui Windows PowerShell 5.1/WPF/DISM/SCM reais; portanto, o Auto-Teste completo da build FINAL deve ser executado no Windows para a confirmação binária da embalagem final.
+- Essa limitação é mitigada pelo congelamento byte-a-byte de App/Engine/Worker em relação à RC15.3 já testada no Windows real.
+
+DECISÃO DE RELEASE
+APROVADA PARA V3.8.1 FINAL
